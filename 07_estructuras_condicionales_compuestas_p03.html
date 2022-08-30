@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estructuras condicionales compuestas</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*Se ingresa por teclado un número positivo de uno o dos dígitos (1..99) mostrar un mensaje indicando
+        si el número tiene uno o dos dígitos (recordar de convertir a entero con parseInt para preguntar
+        posteriormente por una variable entera). Tener en cuenta qué condición debe cumplirse para tener dos dígitos un número entero.  */
+        let numero;
+        numero = parseInt(prompt('Ingrese un numero de uno o dos cifras:'))
+
+        if (numero >= 10) {
+            document.write('El numero tiene dos cifras ')
+        } else {
+            document.write('El numero tiene una cifra ')
+        }
+    </script>
+
+</body>
+</html>

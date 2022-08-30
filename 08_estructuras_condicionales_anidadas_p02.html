@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estructuras condicionales anidadas</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*Se ingresa por teclado un valor entero, mostrar una leyenda que indique si el número es positivo, cero o negativo.
+        */
+        let entero;
+        entero = parseInt(prompt('Ingrese un valor entero: '))
+        if (entero < 0) {
+            document.write(entero + ' es un numero negativo')
+        } else {
+            if (entero == 0) {
+                document.write(entero + ' es cero')
+            } else {
+                document.write(entero + ' es un numero positivo')
+            }
+        }
+
+    </script>
+
+</body>
+</html>

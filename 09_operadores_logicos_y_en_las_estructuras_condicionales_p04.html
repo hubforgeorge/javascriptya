@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operadores logicos en las estructuras condicionales</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Escribir un programa que pida ingresar la coordenada de un punto en el plano, es decir dos valores enteros x e y.
+        Posteriormente imprimir en pantalla en qué cuadrante se ubica dicho punto.
+        (1º Cuadrante si x > 0 Y y > 0 , 2º Cuadrante: x < 0 Y y > 0, etc.)
+        */
+
+        let x, y;
+        x = parseInt(prompt('Ingrese el valor de x:'))
+        y = parseInt(prompt('Ingrese el valor de y:'))
+
+        if (x > 0 && y > 0) {
+            document.write('El punto ' + '(' + x + ',' + y + ')' + ' esta en el primer cuadrante.')
+        } else {
+            if (x < 0 && y > 0) {
+                document.write('El punto ' + '(' + x + ',' + y + ')' + ' esta en el segundo cuadrante.')
+            } else {
+                if (x < 0 && y < 0) {
+                    document.write('El punto ' + '(' + x + ',' + y + ')' + ' esta en el tercer cuadrante.')
+                }   else {
+                    if (x > 0 && y < 0) {
+                        document.write('El punto ' + '(' + x + ',' + y + ')' + ' esta en el cuarto cuadrante.')
+                    }   else {
+                        document.write('El punto ' + '(' + x + ',' + y + ')' + ' esta en un eje')
+                    }
+
+                }
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

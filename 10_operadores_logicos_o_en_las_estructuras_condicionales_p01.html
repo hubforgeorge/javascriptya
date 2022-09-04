@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operadores logicos o en las estructuras condicionales</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Se ingresan por teclado tres números, si al menos uno de los valores ingresados es menores a 10,
+        imprimir en la página la leyenda 'Alguno de los números es menor a diez'.
+        */
+        let num1, num2, num3;
+        num1 = parseInt(prompt('Ingresa el primer numero: '))
+        num2 = parseInt(prompt('Ingresa el segundo numero: '))
+        num3 = parseInt(prompt('Ingresa el tercer numero: '))
+
+        if (num1 < 10 || num2 < 10 || num3 < 10) {
+            document.write('Alguno de los numeros es menor a 10')
+        }
+
+    </script>
+
+</body>
+</html>

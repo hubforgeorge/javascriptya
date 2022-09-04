@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operadores logicos en las estructuras condicionales</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Confeccionar un programa que lea por teclado tres números distintos y nos muestre el mayor de ellos.
+        */
+        let numero1, numero2, numero3;
+        numero1 = parseInt(prompt('Ingrese el primer numero:'))
+        numero2 = parseInt(prompt('Ingrese el segundo numero:'))
+        numero3 = parseInt(prompt('Ingrese el tercer numero:'))
+
+        if (numero1 > numero2 && numero1 > numero3) {
+            document.write('el mayor es ' + numero1)
+        } else {
+            if (numero2 > numero3) {
+                document.write('el mayor es ' + numero2)
+            } else {
+                document.write('el mayor es ' + numero3)
+            }
+        }
+    </script>
+
+</body>
+</html>

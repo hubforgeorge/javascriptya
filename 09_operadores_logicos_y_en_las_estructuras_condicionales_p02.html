@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operadores logicos en las estructuras condicionales</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Se ingresan tres valores por teclado, si todos son iguales se imprime la suma del primero con el segundo
+        y a este resultado se lo multiplica por el tercero (tener en cuenta que puede haber tres condiciones simples)
+        */
+        let valor1, valor2, valor3;
+        valor1 = parseInt(prompt('Ingrese el primer valor'))
+        valor2 = parseInt(prompt('Ingrese el segundo valor'))
+        valor3 = parseInt(prompt('Ingrese el tercer valor'))
+
+        if (valor1 == valor2 && valor1 == valor3) {
+            let resultado;
+            resultado = (valor1 + valor2) * valor3
+            document.write('los valores son iguales y el resultado es ' + resultado)
+        } else {
+            document.write('los valores no son iguales')
+        }
+
+    </script>
+
+</body>
+</html>

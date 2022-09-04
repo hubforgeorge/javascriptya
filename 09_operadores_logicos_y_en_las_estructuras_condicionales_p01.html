@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operadores logicos en las estructuras condicionales</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Realizar un programa que pida cargar una fecha cualquiera,
+        luego verificar si dicha fecha corresponde a Navidad (se debe cargar por separado el dia, el mes y el año)
+        */
+        let dia, mes, anio;
+        dia = parseInt(prompt('Ingresa el dia:'));
+        mes = parseInt(prompt('Ingresa el mes:'));
+        anio = parseInt(prompt('Ingresa el año:'));
+
+        if (dia == 25 && mes == 12) {
+            document.write('el ' + dia + '/' + mes + '/' + anio + ' es el dia de Navidad');
+        } else {
+            document.write('el ' + dia + '/' + mes + '/' + anio + ' es un dia del año');
+        }
+    </script>
+
+</body>
+</html>

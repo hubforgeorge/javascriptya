@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estructuras switch</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Ingresar por teclado el nombre de un color (rojo, verde o azul),
+        luego mostraremos un mensaje indicando el color ingresado:
+        */
+
+        let color;
+        color = prompt('Elija el color: rojo, verde o azul');
+        switch (color) {
+            case 'rojo':
+            document.write('Ha escogido el color rojo');
+            break;
+            case 'verde':
+            document.write('Ha escogido el color verde');
+            break;
+            case 'azul':
+            document.write('Ha escogido el color azul');
+            break;
+            default:
+            document.write('Ha escogido otro color');
+            break;
+        }
+    </script>
+</body>
+</html>

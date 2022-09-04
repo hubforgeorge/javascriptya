@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estructuras switch</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Confeccionar un programa que solicite que ingrese un valor entre 1 y 5.
+        Luego mostrar en castellano el valor ingresado. Mostrar un mensaje de error
+        en caso de haber ingresado un valor que no se encuentre en dicho rango.
+        */
+
+        let numero;
+        numero = parseInt(prompt('Ingrese un valor entre 1 y 5'))
+
+        switch (numero) {
+            case 1 :
+            document.write('Ha escrito el numero uno')
+            break
+            case 2 :
+            document.write('Ha escrito el numero dos')
+            break
+            case 3 :
+            document.write('Ha escrito el numero tres')
+            break
+            case 4 :
+            document.write('Ha escrito el numero cuatro')
+            break
+            case 5 :
+            document.write('Ha escrito el numero cinco')
+            break
+            default :
+            document.write('Ha escrito un numero que no esta en el rango de 1 a 5')
+            break
+        }
+    </script>
+</body>
+</html>

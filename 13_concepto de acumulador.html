@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Concepto de acumulador</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*
+		Desarrollar un programa que permita la carga de 5 valores por teclado y nos muestre posteriormente la suma.
+		*/
+		let cont = 1;
+		let suma = 0;
+		let valor;
+		while (cont <= 5) {
+			valor = parseInt(prompt('Ingrese un valor:'))
+			suma = suma + valor;
+			cont = cont + 1;
+		}
+		document.write('la suma de los cinco valores es ' + suma)
+
+	</script>
+
+</body>
+</html>

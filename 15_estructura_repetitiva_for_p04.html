@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estructura repetitiva for</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Confeccionar un programa que permita ingresar un valor del 1 al 10 y nos muestre la tabla de multiplicar del mismo (los primeros 12 términos)
+        Ejemplo: Si ingreso 3 deberá aparecer en pantalla los valores 3, 6, 9, hasta el 36. 
+        */
+        let num = parseInt(prompt('Ingese el numero de la tabla'))
+        document.write('Tabla del ' + num)
+        document.write('<br>')
+        for (let i=1; i<=12; i++) {
+            let producto = i * num;
+            document.write(num  +  ' x ' + i + ' = ' + producto)
+            document.write('<br>')
+
+        }
+
+    </script>
+</body>
+</html>

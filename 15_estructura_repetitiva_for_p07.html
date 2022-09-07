@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estructura repetitiva for</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Se realiza la carga de 10 valores enteros por teclado. Se desea conocer:
+        a) La cantidad de valores negativos ingresados.
+        b) La cantidad de valores positivos ingresados.
+        c) La cantidad de múltiplos de 15.
+        d) El valor acumulado de los números ingresados que son pares.
+        */
+        let negativos=0;
+        let positivos=0;
+        let cero=0;
+        let pares=0;
+        let mult15=0;
+        for (let i=1; i<=10; i++){
+            let num = parseInt(prompt('Ingrese un numero:'));
+            // document.write(num + '<br>')
+            if (num < 0) {
+                negativos ++;
+            } else {
+                if (num > 0) {
+                    positivos ++;
+                } else {
+                    cero ++;
+                }
+            }
+            if (num != 0 && num % 15 == 0) {
+                mult15 ++;
+                // document.write('multiplos de 15' + mult15 + '<br>')
+            }
+            if (num % 2 ==0) {
+                pares += num;
+                // document.write('suma de pares' + pares + '<br>')
+            }
+
+        }
+        document.write('La cantidad de valores negativos ingresados. ' + negativos + '<br>')
+        document.write('La cantidad de valores positivos ingresados. ' + positivos + '<br>')
+        document.write('La cantidad de múltiplos de 15. ' + mult15 + '<br>')
+        document.write('El valor acumulado de los números ingresados que son pares. ' + pares + '<br>')
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estructura repetitiva for</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Se cuenta con la siguiente información:
+        Las edades de 5 estudiantes del turno mañana.
+        Las edades de 6 estudiantes del turno tarde.
+        Las edades de 11 estudiantes del turno noche.
+        Las edades de cada estudiante deben ingresarse por teclado.
+        a) Obtener el promedio de las edades de cada turno (tres promedios).
+        b) Imprimir dichos promedios (promedio de cada turno).
+        c) Mostrar por pantalla un mensaje que indique cual de los tres turnos tiene un promedio de edades mayor.
+        */
+        let manana=0;
+        let tarde=0;
+        let noche=0;
+
+        for (let i=1; i<=5; i++) {
+            let edad = parseInt(prompt('edad del alumno del turno mañana:'));
+            manana += edad;
+        }
+
+        for (let j=1; j<=6; j++) {
+            let edad = parseInt(prompt('edad del alumno del turno tarde:'));
+            tarde += edad;
+        }
+
+        for (let k=1; k<=11; k++) {
+            let edad = parseInt(prompt('edad del alumno del turno noche:'));
+            noche += edad;
+        }
+        let p_manana = manana/5
+        let p_tarde = tarde/5
+        let p_noche = noche/5
+        document.write('Promedio de edades del turno mañana: ' + p_manana + '<br>' )
+        document.write('Promedio de edades del turno tarde: ' + p_tarde + '<br>' )
+        document.write('Promedio de edades del turno noche: ' + p_noche + '<br>' )
+
+        if (p_manana > p_tarde && p_manana > p_noche) {
+            document.write('El turno mañana tiene un promedio mayor de edades')
+        } else {
+            if (p_tarde > p_noche) {
+                document.write('El turno tarde tiene un promedio mayor de edades')
+            } else {
+                document.write('El turno noche tiene un promedio mayor de edades')
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

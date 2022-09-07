@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estructura repetitiva for</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Escribir un programa que pida ingresar coordenadas (x,y) que representan puntos en el plano. Informar cuántos puntos se han ingresado en el primer, segundo, tercer y cuarto cuadrante. Al comenzar el programa se pide que se ingrese la cantidad de puntos a procesar.
+        */
+        let primer = 0;
+        let segundo = 0;
+        let tercero = 0;
+        let cuarto = 0;
+        let eje = 0;
+        let cant = parseInt(prompt('Ingrese la cantidad de coordenadas:'))
+        for (let i = 1; i <= cant; i++) {
+            let x = parseInt(prompt('punto ' + i + ' coordenada x'));
+            let y = parseInt(prompt('punto ' + i + ' coordenada y'));
+            if (x > 0 && y > 0) {
+                primer ++;
+            } else {
+                if (x < 0 && y > 0) {
+                    segundo ++;
+                } else {
+                    if (x < 0 && y < 0) {
+                        tercero ++;
+                    } else {
+                        if (x > 0 && y < 0) {
+                            cuarto ++;
+                        } else {
+                            eje ++;
+                        }
+                    }
+                }
+            }
+        }
+        document.write('Puntos en el primer cuadrante:' + primer + '<br>')
+        document.write('Puntos en el segundo cuadrante:' + segundo + '<br>')
+        document.write('Puntos en el tercero cuadrante:' + tercero + '<br>')
+        document.write('Puntos en el cuarto cuadrante:' + cuarto + '<br>')
+        document.write('Puntos en el eje cuadrante:' + eje + '<br>')
+
+    </script>
+</body>
+</html>

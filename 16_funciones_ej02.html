@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Funciones</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		/*
+		Confeccionar una función que solicite el ingreso de un entero y nos muestre la tabla de multiplicar de dicho valor. Llamar luego una vez a la función.
+		*/
+		// let num;
+
+		function tablaMultiplicar() {
+			let num = parseInt(prompt('Ingrese el numero de la tabla:'))
+			document.write('Tabla del ' + num + '<br>')
+			for (let i=1; i<=10; i++) {
+				let producto = i * num;
+				document.write(num + ' x ' + i + ' = ' + producto + '<br>')
+			}
+		}
+		tablaMultiplicar()
+
+	</script>
+
+</body>
+</html>

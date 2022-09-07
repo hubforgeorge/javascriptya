@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Funciones que retornan un valor</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Desarrollar una función que retorne la cantidad de dígitos que tiene una variable entera positiva de hasta 5 dígitos.
+        */
+        function contarDigitos(numero) {
+            if (numero > 0 && numero < 10) {
+                return 1;
+            } else {
+                if (numero < 100) {
+                    return 2;
+                } else {
+                    if (numero < 1000){
+                        return 3;
+                    } else {
+                        if (numero < 10000) {
+                            return 4;
+                        } else {
+                            return 5;
+                        }
+                    }
+                }
+            }
+        }
+        let num = parseInt(prompt('Ingresa un numero de hasta 5 digitos:'));
+        if (num > 0 && num <=99999) {
+            document.write('El numero ' + num + ' tiene ' + contarDigitos(num) + ' digitos');
+        } else {
+            document.write('El valor ingresado es incorrecto');
+        }
+    </script>
+
+</body>
+</html>

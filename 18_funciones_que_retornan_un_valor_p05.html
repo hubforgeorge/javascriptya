@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Funciones que retornan un valor</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Confeccionar una función que solicite la carga de 5 valores por teclado y retorne su suma.
+        */
+        function sumar(x1, x2, x3, x4, x5) {
+            return (x1 + x2 + x3 + x4 + x5);
+        }
+
+        let num1= parseInt(prompt('Ingresa el valor: '));
+        let num2= parseInt(prompt('Ingresa el valor: '));
+        let num3= parseInt(prompt('Ingresa el valor: '));
+        let num4= parseInt(prompt('Ingresa el valor: '));
+        let num5= parseInt(prompt('Ingresa el valor: '));
+
+        document.write('La suma de los numeros ' + num1 + ', ' + num2 + ', ' + num3 + ', ' + num4 + ' y ' + num5 + ' es:  ' + sumar(num1, num2, num3, num4, num5));
+        // document.write(suma(num1, num2, num3, num4, num5));
+
+
+    </script>
+
+</body>
+</html>

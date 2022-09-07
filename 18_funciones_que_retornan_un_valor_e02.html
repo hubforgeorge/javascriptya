@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Funciones que retornan un valor</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Confeccionar una función que reciba una fecha con el formato de día, mes y año
+        y retorne un string con un formato similar a: "Hoy es 27 de enero de 2021"
+        */
+        function convertirFecha(dia, mes, anio) {
+            let nombre_mes;
+            switch (mes) {
+                case 1 :
+                nombre_mes = 'enero';
+                break;
+
+                case 2 :
+                nombre_mes = 'febrero';
+                break;
+
+                case 3 :
+                nombre_mes = 'marzo';
+                break;
+
+                case 4 :
+                nombre_mes = 'abril';
+                break;
+
+                case 5 :
+                nombre_mes = 'mayo';
+                break;
+
+                case 6 :
+                nombre_mes = 'junio';
+                break;
+
+                case 7 :
+                nombre_mes = 'julio';
+                break;
+
+                case 8 :
+                nombre_mes = 'agosto';
+                break;
+
+                case 9 :
+                nombre_mes = 'septiembre';
+                break;
+
+                case 10 :
+                nombre_mes = 'octubre';
+                break;
+
+                case 11 :
+                nombre_mes = 'noviembre';
+                break;
+
+                case 12 :
+                nombre_mes = 'diciembre';
+                break;
+            }
+            let fecha_completa = 'Hoy es ' + dia + ' de ' + nombre_mes + ' del ' + anio;
+            return fecha_completa;
+        }
+
+        let num1 = parseInt(prompt('Ingrese el dia'));
+        let num2 = parseInt(prompt('Ingrese el mes'));
+        let num3 = parseInt(prompt('Ingrese el año'));
+        let dato = convertirFecha(num1, num2, num3);
+        document.write(dato)
+
+    </script>
+
+</body>
+</html>

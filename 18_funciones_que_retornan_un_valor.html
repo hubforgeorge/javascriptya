@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Funciones que retornan un valor</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Confeccionar una función que reciba un valor entero comprendido entre 1 y 5.
+        Luego retornar en castellano el valor recibido.
+        */
+        function leeNumero(numero) {
+            let valor;
+            switch (numero) {
+                case 1 :
+                valor = 'uno';
+                break;
+
+                case 2 :
+                valor = 'dos';
+                break;
+
+                case 3 :
+                valor = 'tres';
+                break;
+
+                case 4 :
+                valor = 'cuatro';
+                break;
+
+                case 5 :
+                valor = 'cinco';
+                break;
+
+                default:
+                valor = 'un valor incorrecto';
+                break;
+
+            }
+            return valor;
+        }
+
+        let num = parseInt(prompt('Ingrese un valor de 1 al 5:'));
+        let dato = leeNumero(num);
+        document.write('El numero ingresado es ' + dato)
+
+    </script>
+
+</body>
+</html>

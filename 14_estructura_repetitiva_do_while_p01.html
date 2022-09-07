@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estructura repetitiva Do While</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Realizar un programa que acumule (sume) valores ingresados por teclado hasta ingresa el 9999
+        (no sumar dicho valor, solamente indica que ha finalizado la carga).
+        Imprimir el valor acumulado e informar si dicho valor es cero, mayor a cero o menor a cero.
+        */
+
+        let suma = 0;
+        let numero = 0;
+        do {
+            suma = suma + numero;
+            numero = parseInt(prompt('Ingresa un numero:'));
+        } while (numero != 9999);
+
+        document.write('La suma de los numeros ingresados es ' + suma)
+        document.write('<br>')
+        if (suma > 0) {
+            document.write('La suma es mayor a cero')
+        } else {
+            if (suma < 0){
+                document.write('La suma es menor a cero')
+            } else {
+                document.write('La suma es igual a cero')
+            }
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estructura repetitiva Do While</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Escribir un programa que solicite la carga de un número entre 0 y 999,
+        y nos muestre un mensaje de cuántos dígitos tiene el mismo.
+        Finalizar el programa cuando se cargue el valor 0.
+        */
+        let valor;
+        do {
+            valor = parseInt(prompt('Ingresa un numero entre 0 y 999: ', ''));
+            document.write('El valor ' + valor + ' tiene ');
+
+            if (valor < 10) {
+                document.write(' 1 digio');
+            } else {
+                if (valor < 100) {
+                    document.write(' 2 digios');
+                } else {
+                    document.write(' 3 digios');
+                }
+            }
+            document.write('<br>')
+        } while (valor != 0)
+    </script>
+
+</body>
+</html>

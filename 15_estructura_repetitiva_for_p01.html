@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estructura repetitiva for</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Confeccionar un programa que lea 3 pares de datos, cada par de datos corresponde
+        a la medida de la base y la altura de un triángulo. El programa deberá informar:
+        a) De cada triángulo la medida de su base, su altura y su superficie.
+        b) La cantidad de triángulos cuya superficie es mayor a 12.
+        */
+        let base = 0;
+        let altura = 0;
+        let mayor_12 = 0;
+        for (let i=1; i<=3; i++) {
+            base = parseInt(prompt('Ingresa la medida de la base del triangulo: '));
+            altura = parseInt(prompt('Ingresa la medida de la altura del triangulo: '));
+            area = (base * altura)/2
+            document.write('La medida de la base es: ' + base + '; la medida de la altura es: ' + altura + '; el area es:' + area)
+            document.write('<br>')
+            if (area > 12) {
+                mayor_12 ++;
+            }
+
+        }
+        document.write('La cantidad de triangulos que tienen un area mayor a 12 es: ' + mayor_12)
+
+    </script>
+</body>
+</html>

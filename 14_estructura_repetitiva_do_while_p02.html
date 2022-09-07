@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estructura repetitiva Do While</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        En un banco se procesan datos de las cuentas corrientes de sus clientes.
+        De cada cuenta corriente se conoce: número de cuenta, nombre del cliente y saldo actual.
+        El ingreso de datos debe finalizar al ingresar un valor negativo en el número de cuenta.
+        Se pide confeccionar un programa que lea los datos de las cuentas corrientes e informe:
+        a) De cada cuenta: número de cuenta, nombre del cliente y estado de la cuenta según su saldo, sabiendo que:
+
+        Estado de la cuenta 'Acreedor' si el saldo es >0.
+                    'Deudor' si el saldo es <0.
+                    'Nulo' si el saldo es =0.
+
+        b) La suma total de los saldos acreedores.
+        */
+        let cliente;
+        let cuenta = 0;
+        let saldo = 0;
+        let total =0;
+        do {
+            cuenta = parseInt(prompt('Ingresa el numero de cuenta'));
+            if (cuenta >= 0) {
+                cliente = prompt('Ingresa el nombre del cliente:');
+                saldo = parseInt(prompt('Ingresa el saldo del cliente:'))
+                document.write('Cuenta del cliente: ' + cuenta);
+                document.write('<br>')
+                document.write('Nombre del cliente: ' + cliente);
+                document.write('<br>')
+                document.write('Saldo del cliente: ' + saldo);
+                document.write('<br>')
+
+                if (saldo > 0) {
+                    document.write('Es Acreedor');
+                    total = total + saldo
+                } else {
+                    if (saldo < 0) {
+                        document.write('Es Deudor');
+                    } else {
+                        document.write('Es Nulo');
+                    }
+                }
+                document.write('<br>')
+                document.write('************************************')
+                document.write('<br>')
+
+            }
+
+        } while (cuenta >= 0);
+        document.write('La suma de todos los saldos acreedores es: ' + total)
+
+
+
+    </script>
+
+</body>
+</html>

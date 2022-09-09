@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clase Array</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Crear un vector con elementos de tipo string. Almacenar los meses del año.
+        En una función solicitar el ingreso de un número entre 1 y 12.
+        Mostrar a qué mes corresponde y cuántos días tiene dicho mes.
+        */
+        function mostrarMes(meses, dias) {
+            let numero = parseInt(prompt('Ingresa el numero del mes: '))
+            document.write('El mes ingresado es ' + meses[numero - 1])
+            document.write(' y tiene ' + dias[numero - 1] + ' dias.')
+        }
+
+        let meses = new Array(12);
+        meses[0] = 'enero';
+        meses[1] = 'febrero';
+        meses[2] = 'marzo';
+        meses[3] = 'abril';
+        meses[4] = 'mayo';
+        meses[5] = 'junio';
+        meses[6] = 'julio';
+        meses[7] = 'agosto';
+        meses[8] = 'septiembre';
+        meses[9] = 'octubre';
+        meses[10] = 'noviembre';
+        meses[11] = 'diciembre';
+
+        let dias = new Array(12);
+        dias[0] = 31;
+        dias[1] = 28;
+        dias[2] = 31;
+        dias[3] = 30;
+        dias[4] = 31;
+        dias[5] = 30;
+        dias[6] = 31;
+        dias[7] = 31;
+        dias[8] = 30;
+        dias[9] = 31;
+        dias[10] = 30;
+        dias[11] = 31;
+
+        mostrarMes(meses, dias)
+
+
+    </script>
+
+</body>
+</html>

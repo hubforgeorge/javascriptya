@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clase Array</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Desarrollar un programa que permita ingresar un vector de 8 elementos, e informe:
+        El valor acumulado de todos los elementos del vector.
+        El valor acumulado de los elementos del vector que sean mayores a 36.
+        Cantidad de valores mayores a 50.
+        */
+        let numero = new Array(8);
+
+        function mostrarArray(numero) {
+            let suma = 0;
+            let suma36 = 0;
+            let cant50 = 0;
+
+            for (let i=0; i<numero.length; i++) {
+                let valor = parseInt(prompt('Ingrese el valor:'));
+                numero[i] = valor;
+            }
+            for (let j=0; j<numero.length; j++) {
+                suma += numero[j];
+                if (numero[j] > 36) {
+                    suma36 += numero[j];
+                }
+                if (numero[j] > 50) {
+                    cant50 += 1;
+                }
+
+            }
+            document.write('El valor acumulado de todos los elementos del vector es :' + suma + '<br>')
+            document.write('El valor acumulado de todos los elementos del vecto que son mayores a 36 :' + suma36 + '<br>')
+            document.write('La cantidad de valores mayores a 50 :' + cant50 + '<br>')
+        }
+
+        mostrarArray(numero);
+
+    </script>
+
+</body>
+</html>

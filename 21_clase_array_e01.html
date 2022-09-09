@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clase Array</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Crear un vector para almacenar los cinco sueldos de operarios y
+        luego mostrar el total de gastos en sueldos (cada actividad en una función)
+        */
+        let sueldos = new Array(5);
+        function cargar(sueldos) {
+            for (let i=0; i<sueldos.length; i++) {
+                sueldos[i] = parseInt(prompt('Ingresa el sueldo del operario: '))
+            }
+        }
+        function mostrarSueldos(sueldos) {
+            let suma = 0;
+            for (let j=0; j<sueldos.length; j++) {
+                suma += sueldos[j];
+            }
+            document.write('los sueldos de los empleados es: <br>');
+            for (let k=0; k<sueldos.length; k++){
+                document.write(sueldos[k] + '<br>');
+            }
+            document.write('El total de gastos en sueldos es: ' + suma);
+        }
+        cargar(sueldos);
+        mostrarSueldos(sueldos);
+    </script>
+
+</body>
+</html>

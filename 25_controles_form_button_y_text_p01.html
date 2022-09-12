@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Controles Form Button y Text</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<!--     Crear un programa que permita cargar un entero en un text y al presionar un botón
+    nos muestre dicho valor elevado al cubo (emplear la función alert).
+ -->
+    <form>
+        Ingrese un numero:
+        <input type="text" id="numero">
+        <input type="button" value="al cubo" onclick="cubo()">
+    </form>
+    <script type="text/javascript">
+        function cubo() {
+            let x = parseInt(document.getElementById('numero').value)
+            alert('El cubo es :' + Math.pow(x,3))
+        }
+    </script>
+
+</body>
+</html>

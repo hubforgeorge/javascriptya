@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Control Select</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Confeccionar una página que muestre un objeto SELECT con distintos tipos de pizzas
+        (Jamón y Queso, Muzzarella, Morrones). Al seleccionar una,
+        mostrar en un objeto de tipo TEXT el precio de la misma.  -->
+    <form>
+        <select id="pizzas" onChange="seleccionarCosto()">
+            <option value="15.9">Hawaiana</option>
+            <option value="59.9">Clasica</option>
+            <option value="40.9">Vegetariana</option>
+            <option value="12.9">Mozzarella</option>
+        </select>
+        <br>
+        El costo es: <input type="text" id="precio">
+    </form>
+    <script type="text/javascript">
+        function seleccionarCosto() {
+            let seleccion = document.getElementById('pizzas');
+            document.getElementById('precio').value = seleccion.options[seleccion.selectedIndex].value;
+        }
+    </script>
+</body>
+</html>

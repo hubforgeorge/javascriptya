@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <p>
+        <form>
+            <select id="opciones" onChange="itemSeleccionado()">
+                <option value="Africa">Antilope</option>
+                <option value="America">Bufalo</option>
+                <option value="Asia">Camello</option>
+                <option value="Africa">Elefante</option>
+                <option value="Antartica">Foca</option>
+                <option value="Todo">Gato</option>
+                <option value="Africa">Hiena</option>
+                <option value="America">Iguana</option>
+                <option value="Africa">Jirafa</option>
+                <option value="Africa">Leon</option>
+            </select>
+            <br>
+            El animal seleccionado se encuentra en : <input type="text" id="continente"><br>
+            El animal seleccionado es : <input type="text" id="animal"><br>
+        </form>
+    </p>
+
+    <script type="text/javascript">
+        function itemSeleccionado() {
+            let seleccion = document.getElementById('opciones');
+            document.getElementById('continente').value = seleccion.options[seleccion.selectedIndex].value;
+            document.getElementById('animal').value = seleccion.options[seleccion.selectedIndex].text;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Controles Form Button y Text</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <form>
+        <p>Ingrese su nombre: <input type="text" Id="nombre"> </p>
+        <p>Ingrese su edad: <input type="text" Id="edad"> </p>
+        <p><input type="button" value="Enviar" onclick="mostrar()"></p>
+    </form>
+    <script type="text/javascript">
+        function mostrar() {
+            let nom = document.getElementById('nombre').value;
+            let edad = document.getElementById('edad').value;
+            alert('El nombre ingresado es:' + nom)
+            alert('La edad ingresado es:' + edad)
+        }
+    </script>
+
+</body>
+</html>

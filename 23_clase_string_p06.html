@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>clase String</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Cargar un String por teclado e implementar las siguientes funciones:
+        a) Imprimir la primera mitad de los caracteres de la cadena.
+        b) Imprimir el último carácter.
+        c) Imprimirlo en forma inversa.
+        d) Imprimir cada carácter del String separado con un guión.
+        e) Imprimir la cantidad de vocales almacenadas
+        */
+        function primeraMitad(cadena) {
+            let mitad = Math.floor(cadena.length / 2);
+            let media_cadena = '';
+            for (i=0; i<mitad; i++) {
+                media_cadena += cadena.charAt(i);
+            }
+            // document.write('la cadena ' + cadena + ' tiene ' + cadena.length + ' y la mitad es ' + mitad + ' letras' + '<br>')
+            document.write('La mitad de la cadena "' + cadena + '" es: ' + media_cadena + '<br>');
+        }
+
+        function ultimoCaracter(cadena) {
+            document.write('El ultimo caracter de la cadena "' + cadena + '" es: ' + cadena.charAt(cadena.length -1) + '<br>');
+        }
+
+        function palabraInversa(cadena) {
+            let inverso = '';
+            for (let i=0; i<cadena.length; i++) {
+                inverso += cadena.charAt(cadena.length - 1 - i);
+            }
+            document.write('La cadena "' + cadena + '" escrito al revez es: ' + inverso + '<br>');
+        }
+
+        function separadoPorGuion(cadena) {
+            let con_guion ='';
+            for (let i=0; i<cadena.length; i++) {
+                if (i != cadena.length -1) {
+                    con_guion += cadena.charAt(i) + ' - ';
+                } else {
+                    con_guion += cadena.charAt(i);
+                }
+            }
+            document.write('La cadena "' + cadena + '" escrito con guiones es: ' + con_guion + '<br>');
+        }
+
+        function contarVocales(cadena) {
+            let cont = 0;
+            for (let i=0; i<cadena.length; i++) {
+                if (cadena.charAt(i) == 'a' || cadena.charAt(i) == 'A' || cadena.charAt(i) == 'e' || cadena.charAt(i) == 'E' || cadena.charAt(i) == 'i' || cadena.charAt(i) == 'I' || cadena.charAt(i) == 'o' || cadena.charAt(i) == 'O' || cadena.charAt(i) == 'u' || cadena.charAt(i) == 'U') {
+                    cont++;
+                }
+            }
+            document.write('La cadena "' + cadena + '" tiene: ' + cont + ' vocales.' + '<br>');
+        }
+
+        let palabras = prompt('Ingrese una cadena de palabras:');
+        primeraMitad(palabras);
+        ultimoCaracter(palabras);
+        palabraInversa(palabras);
+        separadoPorGuion(palabras);
+        contarVocales(palabras);
+
+
+    </script>
+
+</body>
+</html>

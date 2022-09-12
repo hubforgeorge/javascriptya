@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Controles Form Button y Text</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<!--     Cargar un nombre y un apellido en sendos text. Al presionar un botón,
+    concatenarlos y mostrarlos en un tercer text (Tener en cuenta que podemos modificar
+    la propiedad value de un objeto TEXT cuando ocurre un evento)
+ -->
+    <form>
+        Ingrese el nombre:
+        <input type="text" id="nombre"><br>
+        Ingrese el apellido:
+        <input type="text" id="apellido"><br>
+        <input type="button" value="Juntar Datos" onclick="juntar()">
+        <input type="text" id="cadena" value="">
+    </form>
+    <script type="text/javascript">
+        function juntar() {
+            let nomb = document.getElementById('nombre').value;
+            let apell = document.getElementById('apellido').value;
+            document.getElementById('cadena').value = nomb + ' ' + apell;
+        }
+
+    </script>
+</body>
+</html>

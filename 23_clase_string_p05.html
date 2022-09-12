@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>clase String</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Realizar un programa que permita cargar una dirección de mail
+        e implementar una función que verifique si el String tiene cargado el carácter @.
+        */
+        function comprobarMail(email) {
+            let arroba = 0;
+            for (let i=0; i<email.length; i++) {
+                if (email.charAt(i)=='@') {
+                    arroba += 1;
+                }
+            }
+            if (arroba == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        let cadena = prompt('Ingresa un correo valido')
+        document.write(comprobarMail(cadena))
+
+    </script>
+
+</body>
+</html>

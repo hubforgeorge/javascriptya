@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>clase Math</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Confeccionar un programa que solicite el ingreso de un número
+        y nos muestre dicho valor elevado a la tercera potencia.
+        */
+        function potencia(numero) {
+            let potencia_n = Math.pow(numero, 3)
+            return potencia_n
+        }
+
+        let x = parseInt(prompt('Ingrese un numero:'))
+        document.write('El valor ' + x + ' elevado a la 3 es igual a ' + potencia(x))
+
+    </script>
+
+</body>
+</html>

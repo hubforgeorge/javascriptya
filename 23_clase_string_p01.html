@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>clase Math</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Ingresar una serie de nombres por teclado hasta que se cargue la palabra Fin,
+        y mostrar cuántos nombres se ingresaron.
+        */
+        let cont = 0;
+        let palabra;
+        do {
+            palabra = prompt('Ingrese un nombre: ')
+            if (palabra != 'Fin') {
+                cont += 1;
+            }
+        } while (palabra != 'Fin');
+        document.write('Se ingresaron ' + cont + ' nombres')
+
+    </script>
+
+</body>
+</html>

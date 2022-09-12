@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>clase String</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Ingresar una palabra o texto por teclado y determinar si es o no una palabra palíndromo.
+        (Palabra que se lee de igual manera de adelante hacia atrás, que de atrás hacia delante)
+        */
+        function esPalindromo(palabra) {
+            let cadena = '';
+            for (let i=0; i<palabra.length; i++) {
+                if (palabra.charAt(i) != ' ') {
+                    cadena = cadena + palabra.charAt(i);
+                }
+            }
+            cadena = cadena.toLowerCase()
+            let cant = Math.floor(cadena.length/2)
+            for (let i=0; i<cant; i++) {
+                if (cadena.charAt(i) != cadena.charAt(cadena.length - i - 1)) {
+                    return 'No es Palindromo';
+                }
+            }
+            return 'Es palindromo'
+        }
+
+        let palabra = prompt('Ingrese una palabra')
+
+        document.write(esPalindromo(palabra))
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>clase Math</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Confeccionar un programa que permita cargar un valor comprendido entre 1 y 10.
+        Luego generar un valor aleatorio entre 1 y 10,
+        mostrar un mensaje con el número sorteado e indicar si ganó o perdió:
+        */
+        let numero = parseInt(prompt('Ingresa un valor entre 1 y 10:'))
+        let aleatorio = parseInt(Math.random()*10 + 1)
+
+        if (numero ==aleatorio) {
+            document.write('Ha acertado, el numero aleatorio es ' + aleatorio)
+        } else {
+            document.write('Lo siento, el numero aleatorio fue el ' + aleatorio + ' y usted eligio ' + numero)
+        }
+
+    </script>
+
+</body>
+</html>

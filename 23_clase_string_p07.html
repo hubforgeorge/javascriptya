@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>clase String</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Codifique un programa que permita cargar una oración por teclado,
+        luego mostrar cada palabra ingresada en una línea distinta.
+        Por ejemplo si cargo:
+            La mañana está fría.
+        Debe aparecer:
+        La
+        mañana
+        está
+        fría.
+        */
+        function separarPalabras(cadena) {
+            let separados = '';
+            for (let i=0; i<=cadena.length; i++) {
+                if (cadena.charAt(i) != ' ') {
+                    separados += cadena.charAt(i);
+                } else {
+                    separados += '<br>';
+                }
+            }
+            document.write('La cadena separada en palabras es ' + '<br>' + separados);
+        }
+        let frase = prompt('Ingresa una frase:');
+        separarPalabras(frase);
+
+    </script>
+
+</body>
+</html>

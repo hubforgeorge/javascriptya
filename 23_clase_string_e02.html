@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>clase Math</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Cargar un string por teclado y luego llamar a los distintos métodos
+        de la clase String y la propiedad length.
+        */
+        let cadena = prompt('Ingresar una cadena de caracteres:');
+        document.write('La cadena ingresada es ' + cadena);
+        document.write('<br>');
+        document.write('La longitud de la cadena es ' + cadena.length );
+        document.write('<br>');
+        document.write('El primer caracter de la cadena es: ' + cadena.charAt(0));
+        document.write('<br>');
+        document.write('Los tres primeros caracteres son ' +  cadena.substring(0,3));
+        document.write('<br>');
+        if (cadena.indexOf('Hola') != -1) {
+            document.write('La palabra "Hola" se encuentra en la cadena' + cadena);
+            document.write('<br>');
+        } else {
+            document.write('La palabra "Hola" No se encuentra en la cadena' + cadena);
+            document.write('<br>');
+        }
+        document.write('La cadena en letras minusculas ' + cadena.toLowerCase());
+        document.write('<br>')
+        document.write('La cadena en letras mayusculas ' + cadena.toUpperCase());
+
+    </script>
+
+</body>
+</html>

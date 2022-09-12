@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Control Select</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <p>
+        <form>
+            <select id="seleccion1" onChange="cambiarColor()">
+                <option value="#ff0000">Rojo</option>
+                <option value="#00ff00">Verde</option>
+                <option value="#0000ff">Azul</option>
+            </select>
+        </form>
+    </p>
+    <p>El indice seleccionado es: <input type="text" id="texto1"></p>
+    <p>El color seleccionado es: <input type="text" id="texto2"></p>
+    <p>El valor seleccionado es: <input type="text" id="texto3"></p>
+    <script>
+        function cambiarColor() {
+            let seleccion = document.getElementById('seleccion1');
+            document.getElementById('texto1').value = seleccion.selectedIndex;
+            document.getElementById('texto2').value = seleccion.options[seleccion.selectedIndex].text;
+            document.getElementById('texto3').value = seleccion.options[seleccion.selectedIndex].value;
+        }
+
+    </script>
+</body>
+</html>

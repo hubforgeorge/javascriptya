@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <title>Propiedad screen del objeto window</title>
+</head>
+<body>
+    <!-- Confeccionar un programa que al presionar un botón aparezca
+        una ventana que ocupe todo el ancho del monitor y la mitad de su altura.  -->
+<!--     <form>
+        <input type="button" value="Abrir Ventana" onClick="abrirVentana()">
+    </form> -->
+    <button onClick="abrirVentana()">Abrir Ventana</button>
+    <script>
+        function abrirVentana() {
+            var ventana = open('', '', 'width=' + screen.availWidth + ',height=' + screen.availHeight / 2);
+        }
+    </script>
+
+</body>
+</html>

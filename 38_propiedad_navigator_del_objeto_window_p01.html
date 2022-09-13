@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Propiedad navigator del objeto window</title>
+    <meta charset="UTF-8">
+</head>
+<body onload="mostrarAlerta()">
+    <h1>BIENVENIDOS</h1>
+    <script type="text/javascript">
+        function mostrarAlerta() {
+            if (navigator.cookieEnabled) {
+                alert('Cookies estan activados')
+            } else {
+                alert('No se encuentran las cookies activados')
+            }
+        }
+        document.write('appName: ' + navigator.appName + '<br>')
+        document.write('appVersion: ' + navigator.appVersion + '<br>')
+        document.write('cookieEnabled: ' + navigator.cookieEnabled + '<br>')
+        document.write('platform: ' + navigator.platform + '<br>')
+        document.write('plugins: ' + navigator.plugins.length + '<br>')
+    </script>
+
+</body>
+</html>

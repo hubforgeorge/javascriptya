@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <title>Propiedad location del objeto window</title>
+</head>
+<body>
+<!--     Confeccionar una página que tenga un botón.
+    Cuando se presione dicho botón generar un valor aleatorio entre 0 y 2.
+    Si se genera el 0 llamar al webmail de Outlook,
+    si se genera un 1 llamar a gmail en caso de generarse un 2 llamar a yahoo.
+    Para generar un valor aleatorio utilizar la función random del objeto Math.  -->
+    <button onclick="activar()">Sorteo de correos</button>
+
+    <script type="text/javascript">
+        function activar() {
+            let num = parseInt(Math.random()*3);
+            switch (num) {
+                // case 0:
+                // window.location = 'https://outlook.live.com/';
+                // break;
+                // case 1:
+                // window.location = 'https://mail.google.com/';
+                // break;
+                // case 2:
+                // window.location = 'https://espanol.yahoo.com/';
+                // break;
+                case 0:
+                alert('outlook');
+                break;
+                case 1:
+                alert('gmail');
+                break;
+                case 2:
+                alert('yahoo');
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

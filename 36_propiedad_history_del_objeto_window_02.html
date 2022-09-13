@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Propiedad history del objeto window</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>PAGINA 2</h1>
+    <a href="36_propiedad_history_del_objeto_window_01.html" title="">Ir a la pagina 1</a>
+    <br>
+    <br>
+    <a href="javascript:retroceder()">Regresar en la historia de la pagina 1</a><br>
+<!--     <a href="https://www.larepublica.pe">Ir a la Republica</a><br>
+    <a href="https://www.elcomercio.pe">Ir a el comercio</a><br> -->
+
+    <script type="text/javascript">
+        function retroceder() {
+            // window.history.go(-1)
+            if (window.history.length>0){
+                window.history.go(-1);
+            } else {
+                alert('no hay otra página en la cache hacia adelante');
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Propiedad history del objeto window</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>PAGINA 1</h1>
+    <a href="36_propiedad_history_del_objeto_window_02.html">Ir a la pagina 2</a>
+    <br>
+    <br>
+    <a href="javascript:avanzar()">Extraer el cache de la segunda página.</a>
+
+    <script type="text/javascript">
+        function avanzar() {
+            window.history.go(1)
+        }
+    </script>
+
+</body>
+</html>

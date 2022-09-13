@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos onMouseOver y onMouseOut</title>
+</head>
+<body>
+    <!-- Modificar el segundo problema resuelto (las casillas de la tabla que cambian el color
+        cuando ingresamos con el mouse) para permitir llamar mediante hipervínculos a distintos
+        programas que administran web-mail (gmail, hotmail y yahoo)   -->
+    <form>
+        <table border="1">
+            <tr>
+                <td onMouseOver="color(this,'#ff0000')" onMouseOut="color(this,'#ffffff')"><a href="https://outlook.live.com/">Hotmail</a></td>
+                <td onMouseOver="color(this,'#00ff00')" onMouseOut="color(this,'#ffffff')"><a href="https://espanol.yahoo.com/">Yahoo</a></td>
+                <td onMouseOver="color(this,'#0000ff')" onMouseOut="color(this,'#ffffff')"><a href="https://mail.google.com/">Gmail</a></td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+            function color(objeto,col) {
+                objeto.style.backgroundColor = col;
+            }
+        </script>
+    </form>
+</body>
+</html>

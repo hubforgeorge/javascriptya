@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <!-- Confeccionar una página que permita abrir otra ventana cuando se presiona un botón.
+        Dicha ventana debe tener como ancho 600 pixeles y alto 300 pixeles.  -->
+    <form>
+        <input type="button" value="Nueva ventana" onClick="nueva_ventana()">
+    </form>
+    <script type="text/javascript">
+        function nueva_ventana() {
+            let ventana = open('', '', 'width=600, height=300');
+            // ventana.document.write('Esta es la neva ventana');
+        }
+    </script>
+
+</body>
+
+</html>

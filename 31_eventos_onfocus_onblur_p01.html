@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos onfocus y onblur</title>
+</head>
+<body>
+<!--     Solicitar que se ingrese el nombre y la clave de un usuario.
+    Mostrar una ventana de alerta si en la clave se ingresan
+    menos de 7 caracteres o más de 20 (capturar el evento onBlur) -->
+    <form>
+        Ingrese el nombre del usuario: <input type="text" id="nombre"><br>
+        Ingrese la clave del usuario: <input type="password" id="clave" onblur="comprobar(this)"><br>
+
+        <input type="button" value="Enviar" onClick="enviar()">
+    </form>
+    <script type="text/javascript">
+        function comprobar(dato) {
+            if (dato.value.length < 7 || dato.value.length > 20){
+                alert('La clave debe tener mas de 7 caracteres y menos de 20 caracteres')
+            }
+        }
+        function enviar() {
+            let nom = document.getElementById('nombre').value;
+            let cla = document.getElementById('clave').value;
+            alert('Se ingreso a ' + nom + ' con clave: ' + cla)
+        }
+
+    </script>
+
+</body>
+</html>

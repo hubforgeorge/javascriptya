@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos onMouseOver y onMouseOut</title>
+</head>
+<body>
+    <!-- Otro problema que podemos probar es pinta de color el interior de una casilla
+        de una tabla y regresar a su color original cuando salimos de la misma:  -->
+    <form>
+        <table border="1">
+            <tr>
+                <td onMouseOver="color(this,'#ff0000')" onMouseOut="color(this,'#ffffff')">Rojo</td>
+                <td onMouseOver="color(this,'#00ff00')" onMouseOut="color(this,'#ffffff')">Verde</td>
+                <td onMouseOver="color(this,'#0000ff')" onMouseOut="color(this,'#ffffff')">Azul</td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+            function color(objeto,col) {
+                objeto.style.backgroundColor = col;
+            }
+        </script>
+    </form>
+</body>
+</html>

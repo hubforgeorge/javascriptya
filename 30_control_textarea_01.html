@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Solicitar la carga del mail y el curriculum de una persona.
+        Mostrar un mensaje si el curriculum supera los 2000 caracteres. -->
+    <form>
+        <textarea name="curriculum" id="curriculum" rows="10" cols="50"></textarea><br>
+        <input type="button" id="comprobar" value="Comprobar tamaño" onClick="comprobar_tamano()">
+    </form>
+    <script type="text/javascript">
+        function comprobar_tamano() {
+            if (document.getElementById('curriculum').value.length > 2000) {
+                alert('El texto es muy largo, supera los 2000 caracteres')
+            } else {
+                alert('El texto esta OK')
+            }
+        }
+    </script>
+
+</body>
+</html>

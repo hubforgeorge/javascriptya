@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Confeccionar una página de visitas a un sitio, solicitar ingresar el nombre de una persona,
+        su mail y los comentarios (TEXTAREA). Mostrar luego llamando a la función alert los datos ingresados. -->
+    <form>
+        Ingrese su nombre:
+        <input type="text" id="nombre"><br>
+        Ingrese su email:
+        <input type="text" id="mail"><br>
+        Escriba aqui sus comentarios: <br>
+        <textarea id="comentarios" cols=100 rows="20"></textarea><br>
+        <input type="button" value="confirmar" id="confirmar" onClick="confirmar_datos()">
+
+    </form>
+    <script type="text/javascript">
+        function confirmar_datos() {
+            let nombre_d = document.getElementById('nombre').value;
+            let email_d = document.getElementById('mail').value;
+            let comentarios_d = document.getElementById('comentarios').value;
+            alert(nombre_d + '\n' + email_d + '\n' + comentarios_d)
+        }
+    </script>
+</body>
+</html>

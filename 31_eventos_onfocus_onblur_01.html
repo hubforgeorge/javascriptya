@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="nombre" value="nombre" onfocus="vaciar(this)"><br>
+        <input type="text" id="edad" value="edad" onfocus="vaciar(this)"><br>
+        <input type="button" value="ver datos" onclick="ver()"><br>
+    </form>
+    <script type="text/javascript">
+        function vaciar(contenido) {
+            contenido.value = '';
+        }
+        function ver() {
+            let nom = document.getElementById('nombre').value;
+            let ed = document.getElementById('edad').value;
+            alert('Ingreso: nombre: ' + nom + ' con una edad de: ' + ed)
+        }
+    </script>
+
+</body>
+</html>

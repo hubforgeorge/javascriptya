@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <title>Evento onLoad</title>
+</head>
+<body onLoad="mostrarAlerta()">
+    <!-- Confeccionar una página que muestre un mensaje
+        con la función alert inmediatamente después que se cargue. -->
+    <form>
+        Ingrese su nombre: <input type="text" id="nombre"><br>
+        Ingrese su apellido: <input type="text" id="apellido"><br>
+        Ingrese su edad: <input type="text" id="edad"><br>
+        Ingrese su email: <input type="text" id="email"><br>
+        <input type="button" value="Enviar" onclick="enviarDatos()">
+    </form>
+    <script type="text/javascript">
+        function enviarDatos() {
+            let nom = document.getElementById('nombre').value;
+            let ape = document.getElementById('apellido').value;
+            let eda = document.getElementById('edad').value;
+            let ema = document.getElementById('email').value;
+            alert(nom + ' ' + ape+ ' ' + eda + ' '+ ema)
+        }
+        function mostrarAlerta() {
+            alert('Debe completar los datos para seguir')
+        }
+    </script>
+
+</body>
+</html>

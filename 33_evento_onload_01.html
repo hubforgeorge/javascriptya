@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <title>Evento onLoad</title>
+</head>
+<body onLoad="activarControl()">
+    <form>
+    Ingrese su nombre:
+    <input type="text" id="nombre"><br>
+    Ingese su edad:
+    <input type="text" id="edad"><br>
+    <input type="button" value="Enviar" onclick="enviar()">
+    </form>
+    <script type="text/javascript">
+        function activarControl() {
+            document.getElementById('nombre').focus();
+        }
+
+        function enviar() {
+            let nom = document.getElementById('nombre').value;
+            let ed = document.getElementById('edad').value;
+            alert('Se ingresó :' + nom + ' ' + ed)
+        }
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Control RADIO</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Mostrar cuatro objetos de tipo RADIO que permitan seleccionar los estudios que tiene un usuario: -->
+
+    <form>
+        <input type="radio" id="radio1" name="estudios">Sin estudios <br>
+        <input type="radio" id="radio2" name="estudios">Primarios <br>
+        <input type="radio" id="radio3" name="estudios">Secundarios <br>
+        <input type="radio" id="radio4" name="estudios">Universitarios <br>
+        <input type="button" value="Seleccionar" onClick="seleccionar()">
+    </form>
+    <script>
+        function seleccionar() {
+            if (document.getElementById('radio1').checked) {
+                alert('NO tiene estudios');
+            }
+            if (document.getElementById('radio2').checked) {
+                alert('Tiene estudios primarios');
+            }
+            if (document.getElementById('radio3').checked) {
+                alert('Tiene estudios Secundarios');
+            }
+            if (document.getElementById('radio4').checked) {
+                alert('Tiene estudios universitarios');
+            } 
+        }
+    </script>
+    
+</body>
+</html>

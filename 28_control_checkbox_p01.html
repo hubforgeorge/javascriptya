@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Control Checkbox</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Confeccionar una página que muestre tres checkbox que permitan seleccionar 
+    los deportes que practica el usuario (Fútbol, Básket, Tenis) 
+    Mostrar al presionar un botón los deportes que eligió. -->
+        <h1>Deportes</h1>
+        <form>
+            Seleccione los deportes que practica: <br>
+            <input type="checkbox" id="cbx1">Futbol <br>
+            <input type="checkbox" id="cbx2">Basket <br>
+            <input type="checkbox" id="cbx3">Tenis <br>
+            <input type="button" value="Validar" onclick="validardeportes()">
+        </form>
+        <script>
+            function validardeportes() {
+                let cadena = '';
+                if (document.getElementById('cbx1').checked) {
+                    cadena +=  'Futbol, '
+                }
+                if (document.getElementById('cbx2').checked) {
+                    cadena +=  'Basket, '
+                }
+                if (document.getElementById('cbx3').checked) {
+                    cadena +=  'Tenis '
+                }
+                alert('Deportes seleccionados: ' + cadena)
+            }
+        </script>
+
+</body>
+</html>

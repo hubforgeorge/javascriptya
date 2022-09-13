@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Control RADIO</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Confeccionar una página que muestre dos objetos de la clase RADIO 
+    solicitando que seleccione si es mayor de 18 años o no. 
+    Al presionar un botón mostrar un alert indicando si puede ingresar al sitio o no. -->
+    <form>
+        Es mayor de edad?
+        <br>
+        <input type="radio" id="radio1" name="edad">Si <br>
+        <input type="radio" id="radio2" name="edad">No <br>
+        <input type="button" value="Entrar" onclick="entrar()">
+    </form>
+    <script>
+        function entrar() {
+            if (document.getElementById('radio1').checked) {
+                alert('Puede ingresar')
+            } else {
+                alert('No puede entrar a este sitio, debe tener al menos 18 años.')
+            }
+        }
+    </script>
+</body>
+</html>

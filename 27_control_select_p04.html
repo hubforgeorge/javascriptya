@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Control select</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Confeccionar una página que permita tomar un examen múltiple choice. 
+    Se debe mostrar una pregunta y seguidamente un objeto SELECT con las respuestas posibles. 
+    Al presionar un botón mostrar la cantidad de respuestas correctas e incorrectas 
+    (Disponer 4 preguntas y sus respectivos controles SELECT) -->
+    <h1>Seleccione la respuesta correcta:</h1> 
+        <form>
+            Escriba los pasados participios de los siguientes verbos en ingles: <br>
+            <p>
+            1. -play
+            <select  id="preg1">
+                <option>playing</option>
+                <option>played</option>
+                <option>plow</option>
+            </select>
+            </p>
+            <p>
+            2. -run
+            <select  id="preg2">
+                <option>run</option>
+                <option>runed</option>
+                <option>runned</option>
+            </select>
+            </p>
+            <p>
+            3. -see
+            <select  id="preg3">
+                <option>seen</option>
+                <option>saw</option>
+                <option>seed</option>
+            </select>
+            </p>
+            <p>
+            4. -eat
+            <select  id="preg4">
+                <option>eated</option>
+                <option>eaten</option>
+                <option>eatd</option>
+            </select>
+            </p>
+            <input type="button" value="RESOLVER" onclick="resolver()">
+            <br><br>
+            Cantidad de respuestas correctas: <input type="text" id="correctas">
+            <br><br>
+            Cantidad de respuestas incorrectas: <input type="text" id="incorrectas">
+        </form>
+        <script>
+            function resolver() {
+                let respuesta1 = document.getElementById('preg1').options[document.getElementById('preg1').selectedIndex].text;
+                let respuesta2 = document.getElementById('preg2').options[document.getElementById('preg2').selectedIndex].text;
+                let respuesta3 = document.getElementById('preg3').options[document.getElementById('preg3').selectedIndex].text;
+                let respuesta4 = document.getElementById('preg4').options[document.getElementById('preg4').selectedIndex].text;
+
+                let r_correcta = 0;
+                let r_incorrecta = 0;
+
+                if (respuesta1 == 'played'){
+                    r_correcta +=1;
+                } else {
+                    r_incorrecta +=1;
+                }
+                if (respuesta2 == 'run'){
+                    r_correcta +=1;
+                } else {
+                    r_incorrecta +=1;
+                }
+                if (respuesta3 == 'seen'){
+                    r_correcta +=1;
+                } else {
+                    r_incorrecta +=1;
+                }
+                if (respuesta4 == 'eaten'){
+                    r_correcta +=1;
+                } else {
+                    r_incorrecta +=1;
+                }
+                document.getElementById('correctas').value = r_correcta;
+                document.getElementById('incorrectas').value = r_incorrecta;
+            }
+
+        </script>
+</body>
+</html>

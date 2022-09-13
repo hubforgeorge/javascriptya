@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Control select</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Confeccionar una página que permita seleccionar una pizza y la cantidad de unidades. 
+    Luego al presionar un botón calcular el importe a pagar.
+    Utilizar un objeto de la clase SELECT para la selección de la pizza, pudiendo ser:
+    Queso: $ 4.
+    Jamón y queso: $ 6.
+    Especial: $ 10.
+    A la cantidad de pizzas cargarla en un objeto de la clase TEXT 
+    y en otro objeto de la clase TEXT mostrar el importe total a abonar. -->
+    <form>
+        Seleccione el tipo de Pizza:
+        <select id="pizza">
+            <option value="4">Queso</option>
+            <option value="6">Jamon y Queso</option>
+            <option value="10">Especial</option>
+        </select>
+        <br><br>
+        Cantidad: <input type="text" id="cant">
+        <br><br>
+        <input type="button" value="Calcular" onclick="calcular()">
+        <br><br>
+        El total es: <input type="text" id="total">
+
+    </form>        
+    <script>
+        function calcular() {
+            let seleccion = document.getElementById('pizza');
+            let precio = parseInt(seleccion.options[seleccion.selectedIndex].value);
+            let cantidad = parseInt(document.getElementById('cant').value);
+            document.getElementById('total').value = precio * cantidad;
+
+        }
+    </script>
+</body>
+</html>

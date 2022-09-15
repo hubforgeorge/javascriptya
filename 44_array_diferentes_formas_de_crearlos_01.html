@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Array: Diferentes formas de crearlos</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        let vector1 = new Array();
+        vector1[0] = 1;
+        
+        let vector2 = [];
+        vector2[0] = 1;
+        
+        let vector3 = new Array(5);
+        vector3[0] = 1;
+        
+        let vector4 = new Array(1, 70, 'juan');
+        vector4[0] = 1;
+        
+        let vector5 = [1, 70, 'juan'];
+        vector5[0] = 1;
+
+        document.write(vector1[0] + '<br>')
+        document.write(vector2[0] + '<br>')
+        document.write(vector3[0] + '<br>')
+        document.write(vector4[0] + '<br>')
+        document.write(vector5[0] + '<br>')
+        
+        // document.write( 'VECTOR5 <br>')
+        // for (let i=0; i<5; i++) {
+        //     document.write(vector5[i] + '<br>')
+        // }
+    </script>
+</body>
+</html>

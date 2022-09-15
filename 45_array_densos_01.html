@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Array: densos</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Crear un vector vacío. Mediante una estructura repetitiva solicitar la carga de elementos 
+    por teclado hasta que se ingrese el cero. No almacenar dicho valor en el vector. 
+    Luego sumar todas las componentes del vector, mostrar dicha suma y el tamaño del vector. -->
+    <script>
+        let vector1 = new Array();
+        let i = 0; 
+        let numero = 0;
+        do {
+            numero = parseInt(prompt('Ingrese un valor numérico, (0 para salir)'));
+            if (numero != 0) {
+                vector1[i] = numero;
+                i++;
+            }
+            
+        } while (numero != 0);
+        let suma=0;
+        for (let j=0; j<vector1.length; j++) {
+            suma += vector1[j];
+        }
+        document.write('La suma de todos los elementos del vector es: ' + suma + '<br>')
+        document.write('El tamaño del vector es: ' + vector1.length + '<br>')
+    </script>
+    
+</body>
+</html>

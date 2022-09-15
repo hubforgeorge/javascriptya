@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Programación orientada a objetos en JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Confeccionar una clase llamada suma, que contenga dos atributos (valor1, valor2) 
+        y tres métodos: cargarvalor1, cargarvalor2 y retornarresultado. Implementar la clase suma.
+    La definición de un objeto de la clase que deben plantear es:
+
+    let s=new suma();
+    s.primerValor(10);
+    s.segundoValor(20);
+    document.write('La suma de los dos valores es:'+s.retornarResultado()); -->
+    <script>
+        function Suma(valor1, valor2) {
+            this.valor1 = valor1;
+            this.valor2 = valor2;
+            this.primerValor = primerValor;
+            this.segundoValor = segundoValor;
+            this.retornarResultado = retornarResultado;
+        
+        }
+        function primerValor(valor1) {
+            this.valor1 = valor1;
+        }
+        function segundoValor(valor2) {
+            this.valor2 = valor2;
+        }
+        function retornarResultado() {
+            return this.valor1 + this.valor2;
+        }
+        let suma1;
+        suma1 = new Suma(5, 10);
+        document.write('La suma de 5 y 10 es: ' + suma1.retornarResultado() + '<br>')
+        suma1.primerValor(70);
+        suma1.segundoValor(30);
+        document.write('La suma de 70 y 30 es: ' + suma1.retornarResultado() + '<br>')
+    </script>
+</body>
+</html>

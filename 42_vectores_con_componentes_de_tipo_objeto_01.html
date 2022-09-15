@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vectores con componente de tipo objeto</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Desarrollaremos una clase que represente un hipervínculo y 
+    luego definiremos un vector con componentes de tipo hipervinculo. -->
+    <script>
+        function Hipervinculo (direccion, titulo) {
+            this.direccion = direccion;
+            this.titulo = titulo;
+            this.retornarhipervinculo = function() {
+                let cadena;
+                cadena = '<a href=' + this.direccion + '>' + this.titulo + '</a>';
+                return cadena;
+            }
+        }
+        //Cuerpo del programa
+        let vector = new Array(3);
+        vector[0] = new Hipervinculo('https://www.google.com', 'Google');
+        vector[1] = new Hipervinculo('https://www.msn.com', 'Msn');
+        vector[2] = new Hipervinculo('https://www.yahoo.com', 'Yahoo!');
+
+        for (let i=0; i<vector.length; i++) {
+            document.write(vector[i].direccion);
+            document.write('<br>')
+            document.write(vector[i].titulo);
+            document.write('<br>')
+            document.write(vector[i].retornarhipervinculo());
+            document.write('<br>')
+        }
+    </script>
+</body>
+</html>

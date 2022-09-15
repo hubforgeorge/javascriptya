@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Array: Diferentes formas de crearlos</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Confeccionar un programa que defina dos array, en uno almacenar los días de la semana 
+        y en otro los nombres de los meses. Emplear dos sintaxis diferentes para crear 
+        e inicializar sus componentes. -->
+    <script>
+        let mesesAnio = new Array('enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre');
+        let diasSemana = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'];
+        document.write('MESES DEL AÑO <br>')
+        for (let j=0; j<mesesAnio.length; j++){
+            document.write(mesesAnio[j] + '<br>');
+        }
+        document.write('DÍAS DE LA SEMANA<br>');
+        for (let i=0; i<diasSemana.length; i++){
+            document.write(diasSemana[i] + '<br>');
+        }
+    </script>
+</body>
+</html>

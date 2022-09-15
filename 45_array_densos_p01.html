@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Array: densos</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Crear un vector con 10 valores aleatorios comprendidos entre 1 y 500. 
+    Luego crear otros dos vectores y copiar los elementos menores a 250 en el segundo vector 
+    y los mayores o iguales a 250 en el tercer vector. 
+    Imprimir los tamaños del segundo y tercer vector. Imprimir los tres vectores -->
+    <script>
+        function imprimir(vector) {
+            for (let i=0; i<vector.length; i++) {
+                document.write(vector[i] + ' - ')
+            }
+        }
+        let vector1 = new Array(10);
+        let vector2 = new Array();
+        let vector3 = new Array();
+        let j=0;
+        let k=0;
+
+        for (let i=0; i<10; i++) {
+            vector1[i] = parseInt(Math.random()*500) + 1;
+            if (vector1[i] < 250) {
+                vector2[j] = vector1[i];
+                j++;
+            } else {
+                vector3[k] = vector1[i];
+                k++
+            }
+
+        }
+        document.write('El tamaño del segundo vector es ' + vector2.length + '<br>')
+        document.write('El tamaño del tercer vector es ' + vector3.length + '<br>')
+        document.write('Los elementos del vector 1 son: ')
+        imprimir(vector1);
+        document.write('<br>')
+        document.write('Los elementos del vector 2 son: ')
+        imprimir(vector2);
+        document.write('<br>')
+        document.write('Los elementos del vector 3 son: ')
+        imprimir(vector3);
+        document.write('<br>')
+
+    </script>
+
+</body>
+</html>

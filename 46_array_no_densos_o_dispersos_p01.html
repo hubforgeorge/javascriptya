@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Array: no densos o dispersos</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Crear un vector disperso que representen premios de una rifa. 
+    Las posiciones indican los números que tienen premio. 
+    Almacenar en dichas posiciones los premios. 
+    Genera 10 premios con los montos 1000,2000,3000 etc.
+    La cantidad de números de la rifa son 1000.
+    Generar valores aleatorios para los números con premio.
+    Imprimir Los números con premio y los montos de los mismos.  -->
+    <script>
+        let rifa = [];
+        let num = 0;
+        for (let i=0; i<10; i++) {
+            num = parseInt(Math.random()*1000) + 1;
+            rifa[num] = 1000*(i+1);
+            document.write('El número premiado es :' + num + '; y el premio es de : ' + rifa[num] + '<br>');
+        }
+        // document.write('Numeros Premiados: <br>');
+        // for (let j=0; j<rifa.length; j++) {
+        //     if (rifa[j] != undefined) {
+        //         document.write('El número premiado es :' + j + '; y el premio es de : ' + rifa[j] + '<br>');
+        //     }
+        // }
+    </script>
+</body>
+</html>

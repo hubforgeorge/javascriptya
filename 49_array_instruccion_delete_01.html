@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array: instrucción delete</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Crear un vector de 10 elementos y almacenar valores aleatorios en el mismo. 
+    Luego borrar los elementos de las posiciones pares e imprimir el vector antes 
+    y después de borrar las componentes, inclusive tratar de acceder a las componentes 
+    que acabamos de borrar. -->
+    <script>
+
+        let vector = [];
+        for (let i=0; i<10; i++) {
+            vector.push(parseInt(Math.random()*1000) + 1);
+        }
+        document.write('Elementos del vector antes de borrar los elementos pares: <br>');
+        for (let i=0; i<10; i++) {
+            document.write(vector[i] + '<br>')
+        }
+
+        for (let i=0; i<10; i++) {
+            if ((i+1) % 2 == 0) {
+                delete vector[i];
+            }
+        }
+        document.write('Elementos del vector después de borrar los elementos pares: <br>');
+        for (let i=0; i<10; i++) {
+            document.write(vector[i] + '<br>')
+        }
+
+
+</script>
+    
+</body>
+</html>

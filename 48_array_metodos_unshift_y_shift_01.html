@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array: métodos push y pop</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Ingresar valores por teclado. Los valores menores a 100 ingresarlos al principio del vector 
+    y los mayores o iguales a 100 ingresarlos al final. 
+    Se finaliza la carga de datos al ingresar el cero. 
+    Cuando sale del do/while extraer el último valor ingresado que es el cero del vector. 
+    Imprimir el vector en la página -->
+    <script>
+        let vector = [];
+        let vector2 = [];
+        let numero;
+        do {
+            numero = parseInt(prompt('Ingrese un numero menor o mayor a 100: '));
+            if (numero != 0) {
+                vector2.unshift(numero);
+                if (numero < 100) {
+                    vector.unshift(numero);
+                } else {
+                    vector.push(numero);
+                }
+            }
+
+        } while (numero != 0);
+        document.write('Los elementos del vector: <br>');
+        for (let i=0; i<vector.length; i++) {
+            document.write(vector[i] + '<br>')
+        }
+        document.write('El ultimo valor ingresado es: ' + vector2[0])
+    </script>
+
+</body>
+</html>

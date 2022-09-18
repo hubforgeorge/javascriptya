@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Array: no densos o dispersos</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Por ejemplo podemos crear un vector e inicializar las componentes con subíndice 5 y 10:
+    let vec=[];
+    vec[5]=100;
+    vec[10]=200;
+    Este tipo de array se los llama array dispersos ya que no tenemos todas 
+    las componentes contiguas ocupadas. Veamos con un ejemplo que pasa 
+    con la propiedad length y cuando accedemos a componentes que no existen en el vector: -->
+    <script>
+        let vec = [];
+        vec[5] = 100;
+        vec[10] = 200;
+        document.write('Atributo length:' + vec.length + '<br>');
+        for (let i=0; i<vec.length; i++) {
+            document.write(vec[i] + '<br>');
+        }
+    </script>
+</body>
+</html>

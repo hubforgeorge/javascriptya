@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Array: no densos o dispersos</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Ingresar por teclado un nro de cliente y el monto a depositar. 
+    Almacenar en un vector, utilizar como subíndice el nro de cliente 
+    y almacenar el monto depositado. Sumar todos los depósitos recorriendo el vector 
+    e identificando las componentes cargadas 
+    (es decir las que tienen un valor distinto a undefined). 
+    Imprimir la suma total depositada y la cantidad de clientes que depositaron -->
+    <script>
+        let depositos = [];
+        let nro = 0;
+        do {
+            nro = parseInt(prompt('Ingresa el numero del cliente:'));
+            if (nro != 0) {
+                depositos[nro] = parseInt(prompt('Ingresa el monto a depositar:'));
+            }
+        } while (nro != 0);
+        
+        let suma = 0;
+        let canti = 0;
+        for (let i=0; i<depositos.length; i++) {
+            if (depositos[i] != undefined) {
+                suma += depositos[i]
+                canti++;
+            }
+        }
+        document.write('La cantidad de clientes que depositarion es : ' + canti + '<br>')
+        document.write('El suma total depositada es : ' + suma + '<br>')
+    </script>
+</body>
+</html>

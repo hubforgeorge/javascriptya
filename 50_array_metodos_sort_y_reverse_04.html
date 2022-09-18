@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Array: métodos sort y reverse</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Definir un arreglo de cuatro elementos de tipo objeto, 
+    cada objeto representa una persona con su nombre y edad.
+    Imprimir el vector previo y posteriormente a su ordenamiento por la edad. -->
+    <script>
+        let datos = [
+            {nombre : 'juan', edad : 20},
+            {nombre : 'maria', edad : 30},
+            {nombre : 'alex', edad : 25},
+            {nombre : 'carlos', edad : 45}
+        ];
+        document.write('Personas y sus edades antes de ordenar: <br>')
+        for (let i=0; i<datos.length; i++) {
+            document.write('Nombre: ' + datos[i]['nombre'] +  ' - Edad: ' + datos[i]['edad'] + '<br>')
+        }
+        datos.sort(function (datos1, datos2) {
+            if (datos1.edad < datos2.edad) {
+                return -1;
+            } else {
+                return 1;
+            }
+        })
+        document.write('Personas y sus edades después de ordenar : <br>')
+        for (let i=0; i<datos.length; i++) {
+            document.write('Nombre: ' + datos[i]['nombre'] +  ' - Edad: ' + datos[i]['edad'] + '<br>')
+        }
+    </script>
+</body>
+</html>

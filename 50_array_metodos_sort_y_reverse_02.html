@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Array: métodos sort y reverse</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        let vec = [100, 5, 60, 3, 90];
+        document.write('Vector antes de ordenarlo<br>');
+        for (let f = 0; f < vec.length; f++) {
+            document.write(vec[f] + '<br>');
+        }
+        // vec.sort(function(v1, v2) { if (v1 < v2) return -1; else return 1; });
+        vec.sort(function(v1, v2) {
+            if (v1 < v2) {
+                return -1;
+            } else {
+                return 1;
+            }
+        });
+        document.write('Vector después de ordenarlo<br>');
+        for (let f = 0; f < vec.length; f++) {
+            document.write(vec[f] + '<br>');
+        }
+    </script>
+    
+</body>
+</html>

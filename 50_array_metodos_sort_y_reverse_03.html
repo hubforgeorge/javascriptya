@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Array: métodos sort y reverse</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Crear un vector con 10 elementos enteros con valores aleatorios. 
+    Ordenarlos de menor a mayor. Luego invertir el vector para verlo de mayor a menor. -->
+    <script>
+        let vector = [];
+        for (let i=0; i<10; i++) {
+            vector.push(parseInt(Math.random()*1000));
+        }
+        
+        document.write('Los elementos de vector son <br>');
+        for (let i=0; i<vector.length; i++) {
+            document.write(vector[i] + '<br>');
+        }
+
+        vector.sort(
+            function(v1, v2) {
+                if (v1 < v2) {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            }
+        );
+        document.write('Los elementos de vector ordenado son <br>');
+        for (let i=0; i<vector.length; i++) {
+            document.write(vector[i] + '<br>');
+        }
+        
+        vector.reverse();
+        
+        document.write('Los elementos de vector ordenado en orden inverso son <br>');
+        for (let i=0; i<vector.length; i++) {
+            document.write(vector[i] + '<br>');
+        }
+
+    </script>
+
+</body>
+</html>

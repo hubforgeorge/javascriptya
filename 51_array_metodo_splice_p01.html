@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Array: método splice</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Crear un vector con una lista de valores. Luego borrar las componentes donde hay un 2 
+    y al mismo tiempo insertar dos elementos con el valor 1.  -->
+    <script>
+        let vec = [0, 7, 2, 3, 4, 2, 6, 2, 8, 2];
+        document.write('Los elementos antes de hacer la modificación: <br>')
+        for (let i=0; i<vec.length; i++) {
+            document.write(vec[i] + '<br>')
+        }
+
+        for (let i=0; i<vec.length; i++) {
+            if ( vec[i] == 2) {
+                vec.splice(i, 1, 1, 1);
+            }
+        }
+        
+        document.write('Los elementos depués de hacer la modificación: <br>')
+        for (let i=0; i<vec.length; i++) {
+            document.write(vec[i] + '<br>')
+        }
+
+    </script>
+</body>
+</html>

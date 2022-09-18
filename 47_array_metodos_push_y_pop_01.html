@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array: métodos push y pop</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Realizar la carga de sueldos por teclado hasta que se ingrese el cero. 
+    Almacenar todos los valores ingresados en un vector empleando el método push. 
+    Mostrar la suma de sueldos ingresados -->
+    <script>
+        let sueldos = new Array();
+        let cantidad;
+        do {
+            cantidad = parseInt(prompt('Ingrese el sueldo del empleado (0 para terminar)'))
+            if (cantidad != 0) {
+                sueldos.push(cantidad)
+            }
+
+        } while (cantidad !=0);
+        let suma = 0;
+        for (let i=0; i<sueldos.length; i++) {
+            suma += sueldos[i]
+        }
+        document.write('La suma de los sueldos ingresados es: ' + suma)
+    </script>
+    
+</body>
+</html>

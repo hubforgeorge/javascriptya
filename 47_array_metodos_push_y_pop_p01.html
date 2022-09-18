@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array: métodos push y pop</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Crear un vector con 5 valores aleatorios comprendidos entre 1 y 1000. 
+    Luego extraer los dos últimos elementos sumarlos y mostrarlos. 
+    Imprimir también el tamaño final del vector. -->
+    <script>
+        let vector = [];
+        for (let i=0; i<5; i++) {
+            vector.push(parseInt(Math.random()*1000) + 1)
+        }
+        document.write('Los elementos del vector: ' + vector + '<br>')
+        
+        let suma = 0;
+        for (i=0; i<2; i++) {
+            suma += vector.pop();
+        }
+        document.write('Los elementos del vector después de retirar los dos últimos elementos: ' + vector + '<br>')
+        document.write('La suma de los dos ultimos valores es: ' + suma + '<br>')
+        document.write('El tamaño final del vector es: ' + vector.length + '<br>')
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Array: método join</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script type="text/javascript">
+        // El método join concatena todos los elementos del vector en un único string.
+        let vec =  [10, 20, 30, 40, 50, 60];
+        cadena = vec.join('-');
+        document.write(cadena);
+        document.write('<br>');
+
+        // Podemos disponer más de un caracter de separación:
+        // let vec =  [10, 20, 30, 40, 50, 60];
+        cadena2 = vec.join('---');
+        document.write(cadena2);
+
+        document.write('<br>');
+        // Podemos llamar al método join inclusive sin parámetros, en dicho caso se agrega por defecto el caracter de la coma:
+        cadena3 = vec.join();
+        document.write(cadena3)
+
+
+    </script>
+
+</body>
+</html>

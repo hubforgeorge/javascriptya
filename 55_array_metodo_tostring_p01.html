@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Array: método toString</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<!--     Crear un vector de 10 elementos. Inicializar los valores del vector cuando se crea.
+    Inicializar dos variables que resulten de llamar primero al método toString()
+    y la segunda variable inicializarla llamando al método join() sin parámetros.
+    Mostrar un mensaje si el resultado de la ejecución de los dos métodos retorna el mismo valor
+    (empleando un if para comparar los string)  -->
+    <script type="text/javascript">
+        let vec = new Array(10);
+        for (let i=0; i<vec.length; i++) {
+            vec[i] = parseInt(Math.random()*1000);
+        }
+        cadena1 = vec.join();
+        cadena2 = vec.toString();
+        document.write('cadena join: ' + cadena1 + '<br>');
+        document.write('cadena toString: ' + cadena2 + '<br>');
+        if (cadena1 == cadena2) {
+            document.write('Las dos cadenas son iguales <br>');
+        } else {
+            document.write('Las cadenas son diferentes <br>')
+        }
+
+    </script>
+</body>
+</html>

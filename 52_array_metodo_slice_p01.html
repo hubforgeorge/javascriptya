@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array: método slice</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script type="text/javascript">
+    // Crear un vector de 10 elementos con valores aleatorios comprendidos entre 0 y 1000.
+    // Buscar el menor y luego generar otro vector a partir de dicha posición hasta el final
+    let vector = [];
+    for (let i=0; i<10; i++) {
+        vector.push(parseInt(Math.random()*1000))
+    }
+    document.write('Los elementos del vector son: <br>')
+    for (let i=0; i<vector.length; i++) {
+        document.write(vector[i] + '<br>');
+    }
+    let menor = vector[0];
+    let indice_menor = 0;
+
+    for (let i=0; i<vector.length; i++) {
+        if (vector[i] < menor) {
+            menor = vector[i];
+            indice_menor = i;
+        }
+    }
+    let vector2 = vector.slice(indice_menor);
+    document.write('El menor es: ' + menor + ' y su indice es = ' + indice_menor + '<br>')
+
+    document.write('Los elementos del vector2 son: <br>')
+    for (let i=0; i<vector2.length; i++) {
+        document.write(vector2[i] + '<br>');
+    }
+    </script>
+
+</body>
+</html>

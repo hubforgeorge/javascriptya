@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Array: método toString</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<!--     Crear un vector con 10 elementos con valores aleatorios comprendidos entre 0 y 1000.
+    Luego copiar el contenido del vector a un string con los valores de las componentes separados por coma: -->
+    <script type="text/javascript">
+        let vec = new Array(10);
+
+        for (let i=0; i<vec.length; i++) {
+            vec[i] = parseInt(Math.random()*1001);
+        }
+
+        document.write('Los elementos del vector original: <br>')
+        document.write(vec.join() + '<br>')
+
+        document.write('Los elementos de la cadena: <br>')
+        document.write(vec.toString())
+
+    </script>
+
+</body>
+</html>

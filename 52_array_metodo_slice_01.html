@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array: método slice</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script type="text/javascript">
+        let vector = [10, 20, 30, 40, 50, 60];
+
+        document.write('Los elementos del vector son: <br>')
+        for (let i=0; i<vector.length; i++) {
+            document.write(vector[i] + '<br>');
+        }
+
+        let vector2 = vector.slice(1,4);
+        document.write('Vector resultante de la llamada a slice: <br>')
+        for (let i=0; i<vector2.length; i++) {
+            document.write(vector2[i] + '<br>');
+        }
+        // Si queremos extraer desde una determinada posición hasta el final del vector
+        // debemos llamar al método slice con un solo parámetro:
+        let vector3 = vector.slice(2)
+        document.write('Los elementos del vector3 son: <br>')
+        for (let i=0; i<vector3.length; i++) {
+            document.write(vector3[i] + '<br>');
+        }
+
+        // Si queremos indicar una posición pero comenzando desde el final del vector
+        // debemos indicar un valor negativo en el primer parámetro:
+
+        let vector4 = vector.slice(-2)
+        document.write('Los elementos del vector4 son: <br>')
+        for (let i=0; i<vector4.length; i++) {
+            document.write(vector4[i] + '<br>');
+        }
+
+        let vector5 = vector.slice(-3,-1)   //desde la posicion -2 (dos antes del final) hasta la posicion -1 (sin contar el numero final)
+        document.write('Los elementos del vector5 son: <br>')
+        for (let i=0; i<vector5.length; i++) {
+            document.write(vector5[i] + '<br>');
+        }
+
+        // Por último podemos indicar el primer parámetro un valor positivo
+        // y el segundo un valor negativo indicando una posición desde el final
+
+        let vector6 = vector.slice(1,-1)   //desde la posicion -2 (dos antes del final) hasta la posicion -1 (sin contar el numero final)
+        document.write('Los elementos del vector6 son: <br>')
+        for (let i=0; i<vector6.length; i++) {
+            document.write(vector6[i] + '<br>');
+        }
+
+
+
+
+
+    </script>
+
+</body>
+</html>

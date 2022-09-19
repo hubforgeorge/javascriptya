@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Array: método join</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<!--     Crear un vector con los datos de 5 personas.
+    Luego imprimir por pantalla uno abajo de otro utilizando el método join
+    para generar un string y agregarle entre elementos la etiqueta html <br>. -->
+    <script type="text/javascript">
+        let vector = [{nombre:'Juan', edad:30},{nombre:'Ana', edad:20},{nombre:'Lucia', edad:18},{nombre:'Pedro', edad:50},{nombre:'Carlos', edad:42}];
+        for (let i=0; i<vector.length; i++) {
+            document.write(vector[i]['nombre'] + ' _ ' + vector[i]['edad'] + '<br>')
+        }
+        cadena = vector.join('_');
+        document.write(cadena + '<br>')
+    </script>
+</body>
+</html>

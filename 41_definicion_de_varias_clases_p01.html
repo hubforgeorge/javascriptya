@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <title>Definición de varias clases</title>
+</head>
+<body>
+<!--     Plantear una clase persona (que permita cargar por teclado su nombre y edad).
+    Por otro lado crear una clase empresa que tenga como atributo la edad tope
+    para que una persona pueda ingresar como trabajador en la misma (60 años)
+    Confeccionar un pequeño programa en JavaScript que defina 3 objetos de la clase persona y 1 de la clase empresa.
+    Mostrar cuántas de esas personas están inhabilidadas para ingresar como trabajadores de acuerdo a la edad tope. -->
+    <script type="text/javascript">
+        function Persona() {
+            this.nombre = '';
+            this.edad = '';
+            this.cargarNombreEdad = function() {
+                this.nombre = prompt('Ingrese su nombre:')
+                this.edad = prompt('Ingrese su edad:')
+            }
+        }
+        function Empresa() {
+            this.edadMaxima = 60;
+            this.puedeTrabajar = function(edad) {
+                if (this.edadMaxima>edad){
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+        //Cuerpo del programa
+
+        let persona1 = new Persona();
+        let persona2 = new Persona();
+        let persona3 = new Persona();
+        persona1.cargarNombreEdad();
+        persona2.cargarNombreEdad();
+        persona3.cargarNombreEdad();
+
+        let empresa1 = new Empresa();
+        if (empresa1.puedeTrabajar(persona1.edad)){
+            document.write(persona1.nombre + ' puede trabajar en esta empresa.' + '<br>')
+        }
+
+        if (empresa1.puedeTrabajar(persona2.edad)){
+            document.write(persona2.nombre + ' puede trabajar en esta empresa.' + '<br>')
+        }
+
+        if (empresa1.puedeTrabajar(persona3.edad)){
+            document.write(persona3.nombre + ' puede trabajar en esta empresa.' + '<br>')
+        }
+
+    </script>
+
+</body>
+</html>

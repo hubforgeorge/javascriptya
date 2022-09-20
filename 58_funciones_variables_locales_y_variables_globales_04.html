@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Funciones: variables locales y variables globales</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- El JavaScript moderno introduce una directiva para salvar este 
+        y otros problemas muy comunes. Si activamos modo estricto todas 
+        las variables en JavaScript deben declarase sino se produce un error. 
+        Veamos como introducimos esta directiva de modo estricto: -->
+
+    <script>
+        'use strict';
+        function imprimir() {
+            x = 100;
+            document.write(x + '<br>');
+        }
+        imprimir();
+        document.write(x + '<br>');
+
+    </script>
+</body>
+</html>

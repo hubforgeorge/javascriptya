@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Funciones: variables locales y variables globales</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Cuando definimos variables locales dentro de una función tenemos que no olvidarnos 
+    de anteceder al nombre de la variable la palabra let, en caso de olvidarnos se creará 
+    automáticamente una variable global de tipo 'var' en lugar de 'let' con dicho nombre: -->
+
+    <script>
+        function imprimir() {
+            let x = 100;
+            document.write(x + '<br>');
+        }
+        imprimir();
+        document.write(x + '<br>');
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Funciones: variables locales y variables globales</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        function imprimir() {
+            document.write(global1 + '<br>');
+            global1 ++;
+        }
+        let global1 = 100;
+        imprimir();
+        document.write(global1);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Funciones: objeto arguments</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Confeccionar una función que retorne la suma de dos enteros:
+    Luego podemos resolver esta misma función accediendo al objeto arguments 
+    que se crea cada vez que llamamos a una función:-->
+    <script>
+        function sumar(x, y) {
+            let suma = arguments[0] + arguments[1]
+            return suma
+        }
+        document.write(sumar(3,5))
+    </script>
+</body>
+</html>

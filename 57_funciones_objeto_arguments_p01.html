@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Funciones: objeto arguments</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+    <!-- Confeccionar una función que obtenga y retorne el mayor valor de una lista de enteros 
+    que le pasamos como parámetros. -->
+    <script>
+        function mayor_numero() {
+            let mayor = arguments[0];
+            for (let i=1; i<arguments.length; i++) {
+                if (arguments[i] > mayor) {
+                    mayor = arguments[i];
+                }
+            }
+            return mayor;
+        }
+        let numero = mayor_numero(12, 14, 6, 23, 56, 108, 2, 1, 9, 99);
+        document.write('El mayor es: ' + numero + '<br>');
+    </script>
+</body>
+</html>

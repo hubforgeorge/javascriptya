@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Funciones: anidadas</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Confeccionar una función que reciba un parámetro y defina una variable local. 
+    Definir dentro de la función que acabamos de crear una función anidada que contenga un parámetro.
+    En la función anidada imprimir el parámetro de la función que la contiene, 
+    el parámetro que tiene la función anidada y el valor de la variable local de la función principal.  -->
+    <script>
+        function prueba1(valor1) {
+            function interno (valor3) {
+                document.write('Parámetro de la funcion exterior: ' + valor1 + '<br>');
+                document.write('Parámetro de la funcion anidada: ' + valor3 + '<br>');
+                document.write('variable local de la funcion exterior: ' + valor2 + '<br>');
+            }
+            let valor2=1;
+            interno(2);
+
+        }
+        prueba1(3);
+
+
+
+
+
+    </script>
+</body>
+</html>

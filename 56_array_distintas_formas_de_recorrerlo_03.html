@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Array: distintas formas de recorrerlo</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Si tenemos un vector no denso (es decir que tiene algunas posiciones vacías el empleo del for in 
+    tiene un resultado distinto al empleo del for clásico): -->
+    <script>
+        let vec = [10,, 30,, 50];
+        document.write('Recorrido del vector con un for clasico <br>')
+        for (let i=0; i<vec.length; i++) {
+            document.write(vec[i] + ' - ')
+        }
+        document.write('<br>')
+        document.write('Recorrido del vector con un for in <br>')
+        for (let indice in vec) {
+            document.write(vec[indice]  + ' - ');
+        }
+    </script>
+    
+</body>
+</html>

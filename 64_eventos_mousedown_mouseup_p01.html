@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Eventos: mousedown y mouseup</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Elaborar un programa que muestre un div de color rojo. 
+    Cuando se presione cambiar el color a amarillo y luego de soltar el botón del mouse 
+    volver a pintar de rojo.  -->
+    <div style="width:200px;height:200px;background-color: #ff0000" id="cambiar"></div>
+
+    <script>
+        document.getElementById('cambiar').addEventListener('mousedown', presionar);
+        document.getElementById('cambiar').addEventListener('mouseup', soltar);
+        
+        function presionar () {
+            document.getElementById('cambiar').style.backgroundColor="#ffff00"
+        }
+        function soltar () {
+            document.getElementById('cambiar').style.backgroundColor="#ff0000"
+        }
+    </script> 
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Eventos: mousedown y mouseup</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <p>Presione el cuadro amarillo sin soltar el botón del mouse.</p>
+    <div style="width:200px; height:200px; background-color:#ffff00" id="recuadro1">texto anterrior1</div>
+    <p>Presione el recuadro naranja y suelte el botón del mouse.</p>
+    <div style="width:200px; height:200px; background-color:#ff5500" id="recuadro2">texto anterrior1</div>
+    <script>
+        document.getElementById('recuadro1').addEventListener('mousedown', presion1)
+        document.getElementById('recuadro2').addEventListener('mouseup', presion2)
+
+        function presion1 () {
+            document.getElementById('recuadro1').innerHTML = 'Se presionó el mouse y todavia no se suelta'
+        }
+
+        function presion2 () {
+            document.getElementById('recuadro2').innerHTML = 'Se presionó el mouse y se soltó'
+        }
+        //El método que se dispara para el primer div procedemos a modificar todo el contenido del div 
+        //accediendo a la propiedad innerHTML:
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Eventos: mouseover y mouseout</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Mostrar un elemento de tipo H1, luego cuando se ingrese con el mouse dentro del mismo 
+        cambiar el color a letra roja y color de fondo amarillo, 
+        luego cuando se mueva la flecha del mouse fuera del elemento volver al color original.  -->
+    <h1 id="titulo">Titulo Principal</h1>
+
+    <script>
+        document.getElementById('titulo').addEventListener('mouseover', cambiarColor1);
+        document.getElementById('titulo').addEventListener('mouseout', cambiarColor2);
+
+        function cambiarColor1() {
+            document.getElementById('titulo').style.color = "#ff0000";
+            document.getElementById('titulo').style.backgroundColor = "#ffff00";
+        }
+
+        function cambiarColor2() {
+            document.getElementById('titulo').style.color = "#000000";
+            document.getElementById('titulo').style.backgroundColor = "#ffffff";
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+        <style>
+        .boton {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            font-size: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <input type="button" id="boton0" name="boton0" value=" " class="boton">
+        <input type="button" id="boton1" name="boton1" value=" " class="boton">
+        <input type="button" id="boton2" name="boton2" value=" " class="boton">
+    </div>
+    <div>
+        <input type="button" id="boton3" name="boton3" value=" " class="boton">
+        <input type="button" id="boton4" name="boton4" value=" " class="boton">
+        <input type="button" id="boton5" name="boton5" value=" " class="boton">
+    </div>
+    <div>
+        <input type="button" id="boton6" name="boton6" value=" " class="boton">
+        <input type="button" id="boton7" name="boton7" value=" " class="boton">
+        <input type="button" id="boton8" name="boton8" value=" " class="boton">
+    </div>
+    <script>
+        let jugador = 'X';
+        let gano = false;
+
+        for (let x = 0; x < 9; x++) {
+            document.getElementById('boton' + x).addEventListener('click', presion);
+        }
+
+        function presion(evt) {
+            if (evt.target.value != 'X' && evt.target.value != 'O' && gano == false) {
+                evt.target.value = jugador;
+                console.log('jugador x-' + evt.target.name)
+                verificarGanador();
+                if (gano == false) {
+                    jugador2();
+                    verificarGanador();
+                }
+            }
+        }
+
+        function jugador2() {
+            let num;
+            let cont=0;
+            let disponible = [];
+            
+            for (let i=0; i<9; i++) {
+                if (document.getElementById('boton' + i).value == 'X' || document.getElementById('boton' + i).value == 'O') {
+                    cont ++;
+                } else {
+                    disponible.push(i);
+                }
+            }
+
+            let intento, suerte;
+            suerte = chequearO();
+            if (suerte == false) {
+                intento = chequear();
+            }
+            if (cont < 9 && gano==false && intento == false && suerte == false) {
+                num = disponible[parseInt(Math.random()*disponible.length)];
+                document.getElementById('boton' + num).value = 'O';
+                console.log('aleatorio' + '-' + 'boton' + num)
+            }
+        }
+        function verificarGanador() {
+            let b = [];
+            
+            b[0] = document.getElementById('boton0').value;
+            b[1] = document.getElementById('boton1').value;
+            b[2] = document.getElementById('boton2').value;
+            b[3] = document.getElementById('boton3').value;
+            b[4] = document.getElementById('boton4').value;
+            b[5] = document.getElementById('boton5').value;
+            b[6] = document.getElementById('boton6').value;
+            b[7] = document.getElementById('boton7').value;
+            b[8] = document.getElementById('boton8').value;
+
+            if (b[0] == 'X' && b[1] == 'X' && b[2] == 'X') {
+                document.getElementById('boton0').style.backgroundColor = '#00ff00';
+                document.getElementById('boton1').style.backgroundColor = '#00ff00';
+                document.getElementById('boton2').style.backgroundColor = '#00ff00';
+                alert('Gano la X');
+                gano = true;
+            }
+            if (b[3] == 'X' && b[4] == 'X' && b[5] == 'X') {
+                document.getElementById('boton3').style.backgroundColor = '#00ff00';
+                document.getElementById('boton4').style.backgroundColor = '#00ff00';
+                document.getElementById('boton5').style.backgroundColor = '#00ff00';
+
+                alert('Gano la X');
+                gano = true;
+            }
+            if (b[6] == 'X' && b[7] == 'X' && b[8] == 'X') {
+                document.getElementById('boton6').style.backgroundColor = '#00ff00';
+                document.getElementById('boton7').style.backgroundColor = '#00ff00';
+                document.getElementById('boton8').style.backgroundColor = '#00ff00';
+
+                alert('Gano la X');
+                gano = true;
+            }
+            if (b[0] == 'X' && b[3] == 'X' && b[6] == 'X') {
+                document.getElementById('boton0').style.backgroundColor = '#00ff00';
+                document.getElementById('boton3').style.backgroundColor = '#00ff00';
+                document.getElementById('boton6').style.backgroundColor = '#00ff00';
+
+                alert('Gano la X');
+                gano = true;
+            }
+            if (b[1] == 'X' && b[4] == 'X' && b[7] == 'X') {
+                document.getElementById('boton1').style.backgroundColor = '#00ff00';
+                document.getElementById('boton4').style.backgroundColor = '#00ff00';
+                document.getElementById('boton7').style.backgroundColor = '#00ff00';
+
+                alert('Gano la X');
+                gano = true;
+            }
+            if (b[2] == 'X' && b[5] == 'X' && b[8] == 'X') {
+                document.getElementById('boton2').style.backgroundColor = '#00ff00';
+                document.getElementById('boton5').style.backgroundColor = '#00ff00';
+                document.getElementById('boton8').style.backgroundColor = '#00ff00';
+
+                alert('Gano la X');
+                gano = true;
+            }
+            if (b[0] == 'X' && b[4] == 'X' && b[8] == 'X') {
+                document.getElementById('boton0').style.backgroundColor = '#00ff00';
+                document.getElementById('boton4').style.backgroundColor = '#00ff00';
+                document.getElementById('boton8').style.backgroundColor = '#00ff00';
+
+                alert('Gano la X');
+                gano = true;
+            }
+            if (b[2] == 'X' && b[4] == 'X' && b[6] == 'X') {
+                document.getElementById('boton2').style.backgroundColor = '#00ff00';
+                document.getElementById('boton4').style.backgroundColor = '#00ff00';
+                document.getElementById('boton6').style.backgroundColor = '#00ff00';
+
+                alert('Gano la X');
+                gano = true;
+            }
+
+            if (b[0] == 'O' && b[1] == 'O' && b[2] == 'O') {
+                document.getElementById('boton0').style.backgroundColor = '#ff0000';
+                document.getElementById('boton1').style.backgroundColor = '#ff0000';
+                document.getElementById('boton2').style.backgroundColor = '#ff0000';
+
+                alert('Gano la O');
+                gano = true;
+            }
+            if (b[3] == 'O' && b[4] == 'O' && b[5] == 'O') {
+                document.getElementById('boton3').style.backgroundColor = '#ff0000';
+                document.getElementById('boton4').style.backgroundColor = '#ff0000';
+                document.getElementById('boton5').style.backgroundColor = '#ff0000';
+
+                alert('Gano la O');
+                gano = true;
+            }
+            if (b[6] == 'O' && b[7] == 'O' && b[8] == 'O') {
+                document.getElementById('boton6').style.backgroundColor = '#ff0000';
+                document.getElementById('boton7').style.backgroundColor = '#ff0000';
+                document.getElementById('boton8').style.backgroundColor = '#ff0000';
+
+                alert('Gano la O');
+                gano = true;
+            }
+            if (b[0] == 'O' && b[3] == 'O' && b[6] == 'O') {
+                document.getElementById('boton0').style.backgroundColor = '#ff0000';
+                document.getElementById('boton3').style.backgroundColor = '#ff0000';
+                document.getElementById('boton6').style.backgroundColor = '#ff0000';
+
+                alert('Gano la O');
+                gano = true;
+            }
+            if (b[1] == 'O' && b[4] == 'O' && b[7] == 'O') {
+                document.getElementById('boton1').style.backgroundColor = '#ff0000';
+                document.getElementById('boton4').style.backgroundColor = '#ff0000';
+                document.getElementById('boton7').style.backgroundColor = '#ff0000';
+
+                alert('Gano la O');
+                gano = true;
+            }
+            if (b[2] == 'O' && b[5] == 'O' && b[8] == 'O') {
+                document.getElementById('boton2').style.backgroundColor = '#ff0000';
+                document.getElementById('boton5').style.backgroundColor = '#ff0000';
+                document.getElementById('boton8').style.backgroundColor = '#ff0000';
+
+                alert('Gano la O');
+                gano = true;
+            }
+            if (b[0] == 'O' && b[4] == 'O' && b[8] == 'O') {
+                document.getElementById('boton0').style.backgroundColor = '#ff0000';
+                document.getElementById('boton4').style.backgroundColor = '#ff0000';
+                document.getElementById('boton8').style.backgroundColor = '#ff0000';
+
+                alert('Gano la O');
+                gano = true;
+            }
+            if (b[2] == 'O' && b[4] == 'O' && b[6] == 'O') {
+                document.getElementById('boton2').style.backgroundColor = '#ff0000';
+                document.getElementById('boton4').style.backgroundColor = '#ff0000';
+                document.getElementById('boton6').style.backgroundColor = '#ff0000';
+
+                alert('Gano la O');
+                gano = true;
+            }
+        }
+        function verificarGanadorX(valor) {
+            let b = [];
+            let sigano = false;
+            
+            b[0] = document.getElementById('boton0').value;
+            b[1] = document.getElementById('boton1').value;
+            b[2] = document.getElementById('boton2').value;
+            b[3] = document.getElementById('boton3').value;
+            b[4] = document.getElementById('boton4').value;
+            b[5] = document.getElementById('boton5').value;
+            b[6] = document.getElementById('boton6').value;
+            b[7] = document.getElementById('boton7').value;
+            b[8] = document.getElementById('boton8').value;
+
+            if (b[valor] != 'O') {
+                b[valor] = 'X';
+            }
+
+            if (b[0] == 'X' && b[1] == 'X' && b[2] == 'X') {
+                sigano = true;
+            } else if (b[3] == 'X' && b[4] == 'X' && b[5] == 'X') {
+                sigano = true;
+            } else if (b[6] == 'X' && b[7] == 'X' && b[8] == 'X') {
+                sigano = true;
+            } else if (b[0] == 'X' && b[3] == 'X' && b[6] == 'X') {
+                sigano = true;
+            } else if (b[1] == 'X' && b[4] == 'X' && b[7] == 'X') {
+                sigano = true;
+            } else if (b[2] == 'X' && b[5] == 'X' && b[8] == 'X') {
+                sigano = true;
+            } else if (b[0] == 'X' && b[4] == 'X' && b[8] == 'X') {
+                sigano = true;
+            } else if (b[2] == 'X' && b[4] == 'X' && b[6] == 'X') {
+                sigano = true;
+            }
+            return sigano;
+        }
+
+        function verificarGanadorO(valor) {
+            let b = [];
+            let sigano = false;
+            
+            b[0] = document.getElementById('boton0').value;
+            b[1] = document.getElementById('boton1').value;
+            b[2] = document.getElementById('boton2').value;
+            b[3] = document.getElementById('boton3').value;
+            b[4] = document.getElementById('boton4').value;
+            b[5] = document.getElementById('boton5').value;
+            b[6] = document.getElementById('boton6').value;
+            b[7] = document.getElementById('boton7').value;
+            b[8] = document.getElementById('boton8').value;
+
+            if (b[valor] != 'X') {
+                b[valor] = 'O';
+            }
+
+            if (b[0] == 'O' && b[1] == 'O' && b[2] == 'O') {
+                sigano = true;
+            } else if (b[3] == 'O' && b[4] == 'O' && b[5] == 'O') {
+                sigano = true;
+            } else if (b[6] == 'O' && b[7] == 'O' && b[8] == 'O') {
+                sigano = true;
+            } else if (b[0] == 'O' && b[3] == 'O' && b[6] == 'O') {
+                sigano = true;
+            } else if (b[1] == 'O' && b[4] == 'O' && b[7] == 'O') {
+                sigano = true;
+            } else if (b[2] == 'O' && b[5] == 'O' && b[8] == 'O') {
+                sigano = true;
+            } else if (b[0] == 'O' && b[4] == 'O' && b[8] == 'O') {
+                sigano = true;
+            } else if (b[2] == 'O' && b[4] == 'O' && b[6] == 'O') {
+                sigano = true;
+            }
+            return sigano;
+        }
+
+        function chequear () {
+            let cambio = false;
+            for (let j=0; j<9; j++) {
+                if (document.getElementById('boton' + j).value != 'X' && document.getElementById('boton' + j).value != 'O' && gano != true) {
+                    if(verificarGanadorX(j) && cambio != true) {
+                        document.getElementById('boton' + j).value = 'O';
+                        cambio = true;
+                        console.log('chequear' + '-' + 'boton' + j);
+                        
+                    }
+                    
+                }
+            }
+            return cambio;
+        }
+
+        function chequearO () {
+            let cambio = false;
+            for (let j=0; j<9; j++) {
+                if (document.getElementById('boton' + j).value != 'X' && document.getElementById('boton' + j).value != 'O' && gano != true) {
+                    if(verificarGanadorO(j) && cambio != true) {
+                        document.getElementById('boton' + j).value = 'O';
+                        cambio = true;
+                        console.log('chequear0' + '-' + 'boton' + j);
+                        
+                    }
+                    
+                }
+            }
+            return cambio;
+        }
+    </script>
+
+</body>
+</html>
+    

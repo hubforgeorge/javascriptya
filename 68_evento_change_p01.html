@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <title>Evento: change</title>
+</head>
+<body>
+    <!-- Implementaremos una aplicación que muestre un alert cada vez que sucede 
+        el evento change para los controles checkbox, radio, select, text y textarea. -->
+    
+    <input type="checkbox" name="checkbox1" id="checkbox1">Confirmar términos y condiciones:
+    <br>
+    <input type="button" id="boton" name="boton" value="Confirmar" disabled>
+
+    <script>
+        document.getElementById('checkbox1').addEventListener('change', cambiocheckbox);
+
+
+        function cambiocheckbox () {
+            if (document.getElementById('checkbox1').checked == true) {
+                document.getElementById('boton').disabled = false;
+            } else {
+                document.getElementById('boton').disabled = true;
+
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Eventos: click y dblclick</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+    <div style="width:200px; height: 200px; background-color: #ffff00" id="recuadro1">
+        Este es el recuadro 1, usar un click
+    </div>
+    <div style="width:200px; height: 200px; background-color: #ff0000" id="recuadro2">
+        Este es el recuadro , usar doble click
+    </div>
+
+    <script type="text/javascript">
+        //Otra forma de codificar el programa en una forma más concisa es disponer el bloque de JavaScript
+        //al final de la página, con lo cual podemos obviar el evento 'DOMContentLoaded':
+
+        //addEventListener('DOMContentLoaded', inicio);
+
+        // function inicio () {
+            document.getElementById('recuadro1').addEventListener('click', accion1);
+            document.getElementById('recuadro2').addEventListener('dblclick', accion2);
+        // }
+
+        function accion1 () {
+            alert('Ha realizado un click')
+        }
+        function accion2 () {
+            alert('Ha realizado dobleclick')
+        }
+    </script>
+</body>
+</html>

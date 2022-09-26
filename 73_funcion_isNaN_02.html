@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Función isNaN</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<!--     Realizar la carga de dos valores enteros por teclado utilizando la función prompt.
+    Calcular la suma previo controlar que los dos valores sean de tipo numérico. -->
+    <script type="text/javascript">
+        let num1, num2;
+        num1 = parseInt(prompt('Ingrese un valor numérico'));
+        num2 = parseInt(prompt('Ingrese otro valor numérico'));
+
+        if (isNaN(num1) || isNaN(num2)) {
+            document.write('Al menos uno de los valores ingresados no es un valor numerico')
+        } else {
+            let suma = num1 + num2;
+            document.write('La suma de ' + num1 + ' + ' + num2 + ' es ' + suma);
+        }
+
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Eventos: Load DOMcontentLoaded</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<!-- Implementar un formulario que solicite la carga del nombre de usuario y su clave.
+    Mostrar un mensaje si no se ingresan datos en alguno de los dos controles.
+
+    Este modelo de eventos se basa en la implementación de un método para todos los objetos
+    que nos permite registrar eventos. La sintaxis del método es:
+      addEventListener(evento, método a ejecutar);
+    Veamos como implementamos el problema anterior utilizando este nuevo modelo de eventos: -->
+    <form id="formulario1" method="post">
+        Ingrese nombre:
+        <input type="text" name="nombre" id="nombre"><br>
+        Ingrese clave:
+        <input type="password" name="clave" id="clave"><br>
+        <input type="submit" name="verificar" value="verificar" id="verificar">
+        <!-- name y id no son necesarios en este ejemplo por que no se estan usando -->
+        <!-- <input type="submit" value="verificar"> -->
+    </form>
+
+    <script type="text/javascript">
+        window.addEventListener('load', inicio);
+
+        function inicio () {
+            document.getElementById('formulario1').addEventListener('submit', validar);
+        }
+
+        function validar (event) {
+            let nom = document.getElementById('nombre').value;
+            let cla = document.getElementById('clave').value;
+            if (nom == 0 || cla == 0) {
+                alert('Debe ingresar el nombre y la clave');
+                event.preventDefault();
+            }
+        }
+    </script>
+
+
+
+</body>
+</html>

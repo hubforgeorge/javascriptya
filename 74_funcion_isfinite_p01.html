@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Función isFinite</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Se ingresan por teclado dos números (emplear parseFloat para convertirlos)
+        mostrar un mensaje si alguno de los dos no es un número (isNaN).
+        Luego si son valores numéricos proceder a multiplicarlos y verificar
+        si el resultado es finito (isFinite) para mostrar el resultado.  -->
+    <script type="text/javascript">
+        let num1 = parseFloat(prompt('Ingrese un numero real:'));
+        let num2 = parseFloat(prompt('Ingrese otro numero real:'));
+
+        if (isNaN(num1) || isNaN(num2)) {
+            alert('Alguno de los dos valore ingresados no es un munero');
+        } else {
+            let producto = num1 *  num2;
+            if (isFinite(producto)) {
+                document.write('El producto de ' + num1 + ' x ' + num2 + ' es ' + producto)
+            } else {
+                document.write('El numero no es finito.')
+            }
+        }
+
+
+    </script>
+</body>
+</html>

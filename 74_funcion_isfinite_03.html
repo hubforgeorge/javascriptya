@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Función isFinite</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script type="text/javascript">
+        // Mostrar por pantalla el valor 10 elevado a la 1,2,3 etc. hasta que se genere un valor infinito.
+        for (let x=1; ; x++) {
+            let resultado = Math.pow(10, x);
+            if (isFinite(resultado)) {
+                document.write('El numero 10 elevado a la ' + x + ' es ' + resultado + '<br>')
+            } else {
+                break;
+            }
+        }
+
+    </script>
+</body>
+</html>

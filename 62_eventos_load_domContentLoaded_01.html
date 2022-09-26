@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Eventos: Load DOMcontentLoaded</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<!--     Eventos definidos directamente en la marca HTML: (en desuso)
+    Implementar un formulario que solicite la carga del nombre de usuario y su clave.
+    Mostrar un mensaje si no se ingresan datos en alguno de los dos controles. -->
+    <form method="post" onsubmit="validar()" id="formulario1">
+        Ingrese su nombre:
+        <input type="text" id="usuario" name="usuario" size="20"><br>
+        Ingrese su clave:
+        <input type="password" id="clave" name="clave" size="20"><br>
+        <input type="submit" name="confirmar" id="confirmar" value="confirmar">
+    </form>
+
+    <script type="text/javascript">
+        function validar() {
+            let usu = document.getElementById('usuario').value;
+            let cla = document.getElementById('clave').value;
+            if (usu.length == 0 || cla.length == 0) {
+                alert('El nombre de usuario o clave está vacío')
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>

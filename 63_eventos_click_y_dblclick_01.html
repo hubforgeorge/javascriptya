@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Eventos: click y dblclick</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script type="text/javascript">
+        window.addEventListener('DOMContentLoaded', inicio);
+
+        function inicio () {
+            document.getElementById('rectangulo1').addEventListener('click', ventana1);
+            document.getElementById('rectangulo2').addEventListener('dblclick', ventana2);
+        }
+
+        function ventana1 () {
+            alert('Se presiono una vez');
+        }
+
+        function ventana2 () {
+            alert('Se presiono dos veces')
+        }
+    </script>
+        <div style="width:200px; height:200px; background:#ffff00" id="rectangulo1">
+        prueba del evento click
+        </div>
+        <div style="width:200px; height:200px; background:#ff5500" id="rectangulo2">
+        prueba del evento dblclick
+        </div>
+</body>
+</html>

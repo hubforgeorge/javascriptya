@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #cronometro {
+            font-size: 50px;
+            color: #0000ff;
+        }
+    </style>
+</head>
+<body>
+    <span id="cronometro">0</span>
+    <br>
+    <input type="button" value="detener" id="boton1">
+
+    <script type="text/javascript">
+        document.getElementById('boton1').addEventListener('click', procesar);
+        let reloj;
+        reloj = setInterval(conteo, 1000);
+
+        function procesar () {
+            if (document.getElementById('boton1').value == 'detener') {
+                clearInterval(reloj);
+                document.getElementById('boton1').value = 'continuar';
+            } else {
+                reloj = setInterval(conteo, 1000);
+                document.getElementById('boton1').value = 'detener';
+            }
+        }
+
+        function conteo () {
+            let total = parseInt(document.getElementById('cronometro').innerHTML);
+            total ++;
+            document.getElementById('cronometro').innerHTML = total;
+        }
+    </script>
+
+</body>
+</html>

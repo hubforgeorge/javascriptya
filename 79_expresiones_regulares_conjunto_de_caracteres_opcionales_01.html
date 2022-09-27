@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Expresiones regulares: [] conjunto de caracteres opcionales</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<!--     Controlar si la palabra ingresada comienza con el primer carácter alfabético
+    ya sea en mayúsculas o en minúsculas: -->
+
+    <script type="text/javascript">
+        let palabra = prompt('Ingrese una palabra o frase');
+
+        let expresion = /^[a-zA-Z]/;
+
+        if (expresion.test(palabra))
+            document.write('La palabra o frase comienza con un caracter alfabético')
+        else
+            document.write('La palabra o frase NO comienza con un caracter alfabético')
+    </script>
+
+</body>
+</html>

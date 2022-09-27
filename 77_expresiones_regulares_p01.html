@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Expresiones regulares</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<!--     Ingresar una oración por teclado y luego imprimir un mensaje
+    si la oración ingresada contiene la palabra 'hora' -->
+    <script type="text/javascript">
+        let oracion = prompt('Ingrese un frase:')
+
+        let expresion = /hora/;
+
+        if (expresion.test(oracion))
+            document.write('La oracion ingresada contiene la palabra hora');
+        else
+            document.write('La oración ingresada no contiene la palabra hora')
+
+
+
+    </script>
+</body>
+</html>

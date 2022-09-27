@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <style>
+        #tiempo {
+            font-family: 'Arial';
+            font-size: 50px;
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Confeccionar una página que luego de 10 segundos redireccione
+    a otro sitio empleando para ello la función setTimeout. -->
+    <h1>Primera Página</h1>
+    <span id="tiempo">10</span>
+    <br>
+    Despues de 10 segundos se redigir a la siguiente pagina:
+    <a id="enviar" href="http://www.google.com" title="">Buscador de Google</a>
+
+
+
+
+    <script type="text/javascript">
+        let reloj = setInterval(contar, 1000);
+        function contar () {
+            let acumular = parseInt(document.getElementById('tiempo').innerHTML);
+
+            acumular -= 1;
+            document.getElementById('tiempo').innerHTML = acumular;
+            if (acumular == 0) {
+                clearInterval(reloj);
+                // window.location ='https://www.google.com';
+                window.open('https://www.google.com');
+            }
+
+        }
+
+    </script>
+</body>
+</html>

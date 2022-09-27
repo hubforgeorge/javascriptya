@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Expresiones regulares</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Validar si se ingresa un valor entero con exactamente tres dígitos. -->
+    <script type="text/javascript">
+        let numero = prompt('Ingrese in valor numerico de tres cifras');
+        if (isNaN(numero)) {
+            document.write('El valor ingresado no es un número');
+        } else {
+            let num = parseInt(numero);
+            if (num>99 && num <1000) {
+                document.write('El valor ingresado es un numero de 3 cifras: ' + num)
+            } else {
+                document.write('El valor ingresado no tiene 3 cifras ' + num)
+            }
+        }
+    </script>
+</body>
+</html>

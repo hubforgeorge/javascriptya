@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Operador condicional ?:</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<!--     Ingresar el sueldo bruto de un trabajador.
+    Si supera a 10000 aplicar un descuento del 10%,
+    en caso contrario el descuento es del 5%. -->
+    <script type="text/javascript">
+        let sueldo = parseFloat(prompt('Ingrese el sueldo del trabajador:'))
+
+        sueldo > 10000 ? sueldo = 0.9 * sueldo : sueldo = 0.95 * sueldo;
+
+        document.write('el nuevo sueldo del trabajador es ' + sueldo);
+    </script>
+</body>
+</html>

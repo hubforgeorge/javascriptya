@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Expresiones regulares: (^ principio $ fin) de cadena</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<!-- Ingresar una palabra y mostrar un mensaje si la misma finaliza con el string 'ón' -->
+    <script type="text/javascript">
+        let palabra = prompt('Ingrese una palabra: ');
+        let expresion = /ón$/
+
+        if (expresion.test(palabra))
+            document.write('La parabra termina en \'ón\'')
+        else
+            document.write('La palabra NO termina en \'ón\'')
+
+    </script>
+</body>
+</html>

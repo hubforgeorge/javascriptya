@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Expresiones regulares: (^ principio $ fin) de cadena</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<!--     Ingresar una oración y mostrar un mensaje si la misma comienza con el carácter '-'.
+    Otro mensaje si comienzo con la palabra 'hora'. -->
+    <script type="text/javascript">
+        let oracion = prompt('Ingrese una oracion : ');
+
+        let patron1 = /^-/;
+        let patron2 = /^hora/;
+
+        if (patron1.test(oracion))
+            document.write('La oracion comienza con el caracter - <br>');
+        else
+            document.write('La oracion NO comienza con el caracter - <br>');
+
+        if (patron2.test(oracion))
+            document.write('La oracion comienza con la palabra hora <br>')
+        else
+            document.write('La oracion NO comienza con la palabra hora <br>');
+
+
+    </script>
+</body>
+</html>

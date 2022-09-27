@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Expresiones regulares</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Validar si se ingresa un valor entero con exactamente tres dígitos. -->
+    <script type="text/javascript">
+        let num = prompt('Ingrese un número positivo de 3 digitos:');
+
+        let comprobar = new RegExp('^[0-9]{3}$')
+
+        if (comprobar.test(num))
+            document.write('Se ingreso un numero de tres digitos: ' + num );
+        else
+            document.write('No se ingreso un numero de tres digitos: ' + num );
+
+
+
+
+    </script>
+</body>
+</html>

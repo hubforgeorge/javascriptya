@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <style>
+        #tiempo {
+            font-family: 'Arial';
+            font-size: 50px;
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Confeccionar una página que luego de 10 segundos redireccione
+    a otro sitio empleando para ello la función setTimeout. -->
+    <h1 id="tiempo">Primera página</h1>
+    <p>En 10 segundos se rediccionara a la siguiente página. www.google.com</p>
+
+    <script type="text/javascript">
+
+        setTimeout(enviar, 10000);
+
+        function enviar () {
+            window.location = 'https://www.google.com';
+        }
+
+
+    </script>
+
+</body>
+</html>

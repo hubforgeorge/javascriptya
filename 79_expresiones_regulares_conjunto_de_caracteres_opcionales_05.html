@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Expresiones regulares: [] conjunto de caracteres opcionales</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Ingresar una oración por teclado y luego mostrar un mensaje si el string ingresado 
+    contiene al menos uno de los caracteres que son un comando o metacaracter 
+    para las expresiones regulares: -->
+    <script>
+        let oracion = prompt('Ingrese una oración: ')
+        let patron = /[\^$.*+?=!:|\\/()\[\]{}]/;
+        if (patron.test(oracion)) 
+            alert('La oración tiene al menos un caracter ^ $ . * +? =! : | \ / () [] {}');
+        else
+            alert('La oración NO tiene al menos un caracter ^ $ . * +? =! : | \ / () [] {}');
+    </script>
+</body>
+</html>

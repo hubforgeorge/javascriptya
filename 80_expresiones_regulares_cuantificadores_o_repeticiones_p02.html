@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Expresiones regulares: cuantificadores o repeticiones {x} {x,y} {x,}</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Solicitar el ingreso de la coordenada de un punto. El formato a ingresar por teclado es:(999,999)
+    Los números pueden tener entre 1 y 3 dígitos.  -->
+    <script>
+        let coordenada = prompt('Ingrese la coordenada con el siguiente formato:(999.999)')
+        // let patron = /\([0-9]{1,3}\.[0-9]{1,3}\)/;
+        let patron = /[0-9]{1,3}\.[0-9]{1,3}/;
+
+        if (patron.test(coordenada))
+            document.write('El formato es correcto')
+        else
+            document.write('El formato es INcorrecto')
+    </script>
+</body>
+</html>

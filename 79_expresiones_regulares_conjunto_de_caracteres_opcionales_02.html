@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Expresiones regulares: [] conjunto de caracteres opcionales</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Ingresar una palabra y luego mostrar un mensaje si finaliza con vocal. -->
+    <script>
+        let palabra = prompt('Escriba una palabra');
+        let patron = /[aeiouAEIOUáéíóúÁÉÍÓÚ]$/;
+
+        if (patron.test(palabra)) 
+            alert('La palabra ingresada termina en letra vocal');
+        else
+            alert('La palabra ingresada NO termina en letra vocal');
+    </script>
+</body>
+</html>

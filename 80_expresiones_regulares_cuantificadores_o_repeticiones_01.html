@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Expresiones regulares: cuantificadores o repeticiones {x} {x,y} {x,}</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Ingresar una oración y mostrar si se ingresó un número que tiene al menos 2 dígitos. -->
+    <script>
+        let oracion = prompt('Ingrese una oracion con al menos dos dígitos:');
+        let patron = /[0-9]{2,}/;
+        if (patron.test(oracion))
+            alert('La oración contiene al menos dos dígitos.')
+        else
+            alert('La oración contiene  menos de dos dígitos.')
+    </script>
+</body>
+</html>

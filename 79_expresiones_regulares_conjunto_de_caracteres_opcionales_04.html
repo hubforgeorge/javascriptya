@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Expresiones regulares: [] conjunto de caracteres opcionales</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Ingresar una palabra y luego mostrar un mensaje si contiene una vocal en alguna parte de la palabra. -->
+    <script>
+        let palabra = prompt('Ingrese una palabra: ')
+        let patron = /[aeiouAEIOUáéíóúÁÉÍÓÚ]/
+
+        if (patron.test(palabra)) 
+            alert('La palabra ingresada contiene al menos una vocal')
+        else
+            alert('La palabra ingresada NO contiene ninguna vocal')
+
+
+    </script>
+</body>
+</html>

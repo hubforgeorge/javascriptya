@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <title>Expresiones regulares: cuantificadores o repeticiones {x} {x,y} {x,}</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- Ingresar una patente de un auto de argentina y luego mostrar un mensaje si es correcto o no su valor. 
+    Toda patente está constituida por 2 letras, tres números y finalmente 2 letras (ej. aa123bb ) -->
+    <script>
+        let patente = prompt('Ingrese el numero de patente:');
+        let patron = /^[a-zA-z]{2}[0-9]{3}[a-zA-Z]{2}$/;
+
+        if (patron.test(patente))
+            alert('El numero de patente es correcto')
+        else
+            alert('El numero de patente es INcorrecto')
+    </script>
+</body>
+</html>
